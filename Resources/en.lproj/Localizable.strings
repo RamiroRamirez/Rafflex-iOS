@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Rafflex
+
+  Created by Ramiro Ramirez on 25/03/16.
+  Copyright © 2016 RAM. All rights reserved.
+*/
+
+"Initial.Page.Tutorial.First.Text"      = "Do you have economical troubles? \n Win easy money without effort";
+"Initial.Page.Tutorial.Second.Text"     = "Organize a raffle! \n People have a lot of chances to win and you to get the money you need";
+"Initial.Page.Tutorial.Third.Text"      = "Take part on raffles \n You can win amazing products";
+"Initial.Page.Login.Button"             = "Login";
+"Initial.Page.Register.Button"          = "Sign up for free";

@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Rafflex
+
+  Created by Ramiro Ramirez on 25/03/16.
+  Copyright © 2016 RAM. All rights reserved.
+*/
+
+"Initial.Page.Tutorial.First.Text"      = "Problemas económicos? \n Gana dinero sin ningun esfuerzo";
+"Initial.Page.Tutorial.Second.Text"     = "Organiza una rifa! \n Las personas tienen muchas oportunidades de ganar y tu de obtener el dinero que necesitas";
+"Initial.Page.Tutorial.Third.Text"      = "Participa en rifas! \n Puedes ganar fabulosos productos pagando lo mínimo";
+"Initial.Page.Login.Button"             = "Inicia sesion";
+"Initial.Page.Register.Button"          = "Registrate gratis";
