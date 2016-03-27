@@ -11,27 +11,27 @@ import DKHelper
 
 enum RXTutorial : Int {
     
-    case DineroFacil = 0
-    case Prestamo
-    case Rifa
+    case EasyMoney = 0
+    case Loan
+    case Raffle
     
     static func allValues() -> [RXTutorial] {
-        return [.DineroFacil, .Prestamo, .Rifa]
+        return [.EasyMoney, .Loan, .Raffle]
     }
     
     func image() -> String {
         switch self {
-        case .DineroFacil:      return "dineroFacilTutorial.jpg"
-        case .Prestamo:         return "prestamoTutorial.jpg"
-        case .Rifa:             return "rifaTutorial.jpg"
+        case .EasyMoney:      return "dineroFacilTutorial.jpg"
+        case .Loan:         return "prestamoTutorial.jpg"
+        case .Raffle:             return "rifaTutorial.jpg"
         }
     }
     
     func text() -> String {
         switch self {
-        case .DineroFacil:      return L("Initial.Page.Tutorial.First.Text")
-        case .Prestamo:         return L("Initial.Page.Tutorial.Second.Text")
-        case .Rifa:             return L("Initial.Page.Tutorial.Third.Text")
+        case .EasyMoney:      return L("Initial.Page.Tutorial.First.Text")
+        case .Loan:         return L("Initial.Page.Tutorial.Second.Text")
+        case .Raffle:             return L("Initial.Page.Tutorial.Third.Text")
         }
     }
 }
