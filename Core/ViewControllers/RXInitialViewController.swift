@@ -9,6 +9,33 @@
 import UIKit
 import DKHelper
 
+enum RXTutorial : Int {
+    
+    case DineroFacil = 0
+    case Prestamo
+    case Rifa
+    
+    static func allValues() -> [RXTutorial] {
+        return [.DineroFacil, .Prestamo, .Rifa]
+    }
+    
+    func image() -> String {
+        switch self {
+        case .DineroFacil:      return "dineroFacilTutorial.jpg"
+        case .Prestamo:         return "prestamoTutorial.jpg"
+        case .Rifa:             return "rifaTutorial.jpg"
+        }
+    }
+    
+    func text() -> String {
+        switch self {
+        case .DineroFacil:      return L("Initial.Page.Tutorial.First.Text")
+        case .Prestamo:         return L("Initial.Page.Tutorial.Second.Text")
+        case .Rifa:             return L("Initial.Page.Tutorial.Third.Text")
+        }
+    }
+}
+
 class RXInitialViewController           : UIViewController {
 
     // MARK: - Outlets
@@ -18,21 +45,24 @@ class RXInitialViewController           : UIViewController {
     
     // MARK: - Private properties
     private var pageViewController      : RXInitialPageViewController?
-    private var pageTutorialText        : [String]? = []
-    private var pageTutorialImages      : [String]? = []
     
-    // MARK: - Lige cycle
+    // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBarHidden = true
-        
-        self.pageTutorialImages = ["dineroFacilTutorial.jpg", "prestamoTutorial.jpg", "rifaTutorial.jpg"]
-        self.pageTutorialText = [L("Initial.Page.Tutorial.First.Text"), L("Initial.Page.Tutorial.Second.Text"), L("Initial.Page.Tutorial.Third.Text")]
-        
         self.createPageViewController()
         self.configurateButtoons()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBarHidden = false
     }
     
     /**
@@ -75,17 +105,15 @@ class RXInitialViewController           : UIViewController {
         guard let _index = index else {
             return nil
         }
-        if (self.pageTutorialText?.count == 0 ||
-            self.pageTutorialImages?.count == 0 ||
-            _index >= self.pageTutorialText?.count ||
-            _index >= self.pageTutorialImages?.count ||
+        if (RXTutorial.allValues().count == 0 ||
+            _index >= RXTutorial.allValues().count ||
             _index < 0) {
                 return nil
         }
         
         let pageContentViewController = self.storyboard?.instantiateViewControllerWithIdentifier(StoryboardIds.InitialPageContentViewController) as? RXInitialPageContentViewController
-        pageContentViewController?.imageFile = self.pageTutorialImages?[_index]
-        pageContentViewController?.tutorialText = self.pageTutorialText?[_index]
+        pageContentViewController?.imageFile = RXTutorial(rawValue: _index)?.image()
+        pageContentViewController?.tutorialText = RXTutorial(rawValue: _index)?.text()
         pageContentViewController?.pageindex = _index
         
         return pageContentViewController
@@ -115,7 +143,7 @@ extension RXInitialViewController       : UIPageViewControllerDataSource {
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return (self.pageTutorialText?.count ?? 0)
+        return RXTutorial.allValues().count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
