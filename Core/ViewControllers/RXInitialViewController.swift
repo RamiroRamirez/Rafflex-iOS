@@ -21,17 +21,17 @@ enum RXTutorial : Int {
     
     func image() -> String {
         switch self {
-        case .EasyMoney:      return "dineroFacilTutorial.jpg"
-        case .Loan:         return "prestamoTutorial.jpg"
-        case .Raffle:             return "rifaTutorial.jpg"
+        case .EasyMoney:        return "dineroFacilTutorial.jpg"
+        case .Loan:             return "prestamoTutorial.jpg"
+        case .Raffle:           return "rifaTutorial.jpg"
         }
     }
     
     func text() -> String {
         switch self {
-        case .EasyMoney:      return L("Initial.Page.Tutorial.First.Text")
-        case .Loan:         return L("Initial.Page.Tutorial.Second.Text")
-        case .Raffle:             return L("Initial.Page.Tutorial.Third.Text")
+        case .EasyMoney:        return L("Initial.Page.Tutorial.First.Text")
+        case .Loan:             return L("Initial.Page.Tutorial.Second.Text")
+        case .Raffle:           return L("Initial.Page.Tutorial.Third.Text")
         }
     }
 }
