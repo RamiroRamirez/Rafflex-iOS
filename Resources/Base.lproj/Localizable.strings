@@ -11,3 +11,7 @@
 "Initial.Page.Tutorial.Third.Text"      = "Participa en rifas! \n Puedes ganar fabulosos productos pagando lo mínimo";
 "Initial.Page.Login.Button"             = "Inicia sesion";
 "Initial.Page.Register.Button"          = "Registrate gratis";
+
+"Login.Placeholder.Email"               = "Correo electrónico";
+"Login.Placeholder.Password"            = "Contraseña";
+"Login.Placeholder.PasswordConfirm"     = "Confirma contraseña";

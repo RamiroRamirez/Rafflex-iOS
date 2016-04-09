@@ -11,3 +11,7 @@
 "Initial.Page.Tutorial.Third.Text"      = "Take part on raffles \n You can win amazing products";
 "Initial.Page.Login.Button"             = "Login";
 "Initial.Page.Register.Button"          = "Sign up for free";
+
+"Login.Placeholder.Email"               = "Email address";
+"Login.Placeholder.Password"            = "Password";
+"Login.Placeholder.PasswordConfirm"     = "Repeat password";

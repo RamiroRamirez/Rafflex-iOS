@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8BA79AE7913B2E23AF2AE021 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */; };
+		B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */; };
+		B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */; };
+		B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */; };
+		B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */; };
+		B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */; };
 		B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B79E01CA5993F00F4E771 /* AppDelegate.swift */; };
 		B64B79EA1CA5993F00F4E771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64B79E51CA5993F00F4E771 /* Assets.xcassets */; };
 		B64B79EB1CA5993F00F4E771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64B79E61CA5993F00F4E771 /* LaunchScreen.storyboard */; };
@@ -20,12 +25,6 @@
 		B64B7A0F1CA5C97400F4E771 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64B7A111CA5C97400F4E771 /* Localizable.strings */; };
 		B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A161CA5D06600F4E771 /* RXConstants.swift */; };
 		B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A161CA5D06600F4E771 /* RXConstants.swift */; };
-		B64B7A1C1CA5D1F300F4E771 /* RXInitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A1B1CA5D1F300F4E771 /* RXInitialPageViewController.swift */; };
-		B64B7A1D1CA5D1F300F4E771 /* RXInitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A1B1CA5D1F300F4E771 /* RXInitialPageViewController.swift */; };
-		B64B7A1F1CA5D21800F4E771 /* RXInitialPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A1E1CA5D21800F4E771 /* RXInitialPageContentViewController.swift */; };
-		B64B7A201CA5D21800F4E771 /* RXInitialPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A1E1CA5D21800F4E771 /* RXInitialPageContentViewController.swift */; };
-		B64B7A221CA5D4E600F4E771 /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A211CA5D4E600F4E771 /* RXInitialViewController.swift */; };
-		B64B7A231CA5D4E600F4E771 /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A211CA5D4E600F4E771 /* RXInitialViewController.swift */; };
 		B64B7A281CA5DA6900F4E771 /* dineroFacilTutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B64B7A251CA5DA6900F4E771 /* dineroFacilTutorial.jpg */; };
 		B64B7A291CA5DA6900F4E771 /* dineroFacilTutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B64B7A251CA5DA6900F4E771 /* dineroFacilTutorial.jpg */; };
 		B64B7A2A1CA5DA6900F4E771 /* prestamoTutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B64B7A261CA5DA6900F4E771 /* prestamoTutorial.jpg */; };
@@ -38,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageContentViewController.swift; sourceTree = "<group>"; };
+		B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageViewController.swift; sourceTree = "<group>"; };
+		B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialViewController.swift; sourceTree = "<group>"; };
+		B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoginSignUpViewController.swift; sourceTree = "<group>"; };
 		B64B79BC1CA5949500F4E771 /* Rafflex-Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rafflex-Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64B79E01CA5993F00F4E771 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B64B79E31CA5993F00F4E771 /* Rafflex-Alpha.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Rafflex-Alpha.plist"; sourceTree = "<group>"; };
@@ -49,9 +52,6 @@
 		B64B7A101CA5C97400F4E771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B64B7A121CA5C97A00F4E771 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B64B7A161CA5D06600F4E771 /* RXConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXConstants.swift; sourceTree = "<group>"; };
-		B64B7A1B1CA5D1F300F4E771 /* RXInitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageViewController.swift; sourceTree = "<group>"; };
-		B64B7A1E1CA5D21800F4E771 /* RXInitialPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageContentViewController.swift; sourceTree = "<group>"; };
-		B64B7A211CA5D4E600F4E771 /* RXInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialViewController.swift; sourceTree = "<group>"; };
 		B64B7A251CA5DA6900F4E771 /* dineroFacilTutorial.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dineroFacilTutorial.jpg; sourceTree = "<group>"; };
 		B64B7A261CA5DA6900F4E771 /* prestamoTutorial.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = prestamoTutorial.jpg; sourceTree = "<group>"; };
 		B64B7A271CA5DA6900F4E771 /* rifaTutorial.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rifaTutorial.jpg; sourceTree = "<group>"; };
@@ -81,6 +81,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63AE61C1CA95D5B006FF012 /* InitialViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */,
+				B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */,
+				B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */,
+				B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */,
+			);
+			path = InitialViewControllers;
+			sourceTree = "<group>";
+		};
 		B64B79B31CA5949500F4E771 = {
 			isa = PBXGroup;
 			children = (
@@ -145,9 +156,7 @@
 		B64B7A1A1CA5D1C700F4E771 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B64B7A1B1CA5D1F300F4E771 /* RXInitialPageViewController.swift */,
-				B64B7A1E1CA5D21800F4E771 /* RXInitialPageContentViewController.swift */,
-				B64B7A211CA5D4E600F4E771 /* RXInitialViewController.swift */,
+				B63AE61C1CA95D5B006FF012 /* InitialViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -343,12 +352,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64B7A1C1CA5D1F300F4E771 /* RXInitialPageViewController.swift in Sources */,
 				B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */,
-				B64B7A1F1CA5D21800F4E771 /* RXInitialPageContentViewController.swift in Sources */,
+				B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */,
-				B64B7A221CA5D4E600F4E771 /* RXInitialViewController.swift in Sources */,
+				B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */,
+				B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */,
 				B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
+				B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +366,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64B7A1D1CA5D1F300F4E771 /* RXInitialPageViewController.swift in Sources */,
+				B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				B64B79EF1CA59B8100F4E771 /* AppDelegate.swift in Sources */,
-				B64B7A201CA5D21800F4E771 /* RXInitialPageContentViewController.swift in Sources */,
 				B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */,
-				B64B7A231CA5D4E600F4E771 /* RXInitialViewController.swift in Sources */,
 				B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

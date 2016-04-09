@@ -39,9 +39,9 @@ enum RXTutorial : Int {
 class RXInitialViewController           : UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var loginButton      : UIButton?
-    @IBOutlet weak var signUpButton     : UIButton?
-    @IBOutlet weak var pageContainerView: UIView?
+    @IBOutlet private weak var loginButton      : UIButton?
+    @IBOutlet private weak var signUpButton     : UIButton?
+    @IBOutlet private weak var pageContainerView: UIView?
     
     // MARK: - Private properties
     private var pageViewController      : RXInitialPageViewController?
