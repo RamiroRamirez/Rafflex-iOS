@@ -490,7 +490,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D ALPHA -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b3bcb42f-3762-41c8-8fc4-5d00f24dc021";
+				PROVISIONING_PROFILE = "bb584486-ff4f-4653-bdb5-b0256c94db22";
 			};
 			name = Debug;
 		};
@@ -509,7 +509,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D ALPHA -D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e244551f-2be5-4b79-8d37-326ad3c474cf";
+				PROVISIONING_PROFILE = "109e945b-7159-4c3b-959e-8f868dd45c08";
 			};
 			name = Release;
 		};

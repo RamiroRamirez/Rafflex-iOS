@@ -50,7 +50,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gu2-ld-YU0" kind="show" identifier="toLoginSignUpViewController" id="MJi-EB-NT2"/>
+                                    <action selector="openLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vud-YW-JGv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMG-Hh-ydN">
@@ -62,6 +62,9 @@
                                 <state key="normal" title="Registrate gratis">
                                     <color key="titleColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFh-mp-Df2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,6 +85,8 @@
                         <outlet property="loginButton" destination="cUC-Bk-1yk" id="H6V-Y8-jIJ"/>
                         <outlet property="pageContainerView" destination="4Q7-Qr-oDI" id="8x4-O1-B1K"/>
                         <outlet property="signUpButton" destination="dMG-Hh-ydN" id="W6a-W0-QPR"/>
+                        <segue destination="Gu2-ld-YU0" kind="show" identifier="toLoginViewController" id="FKq-1o-seD"/>
+                        <segue destination="Gu2-ld-YU0" kind="show" identifier="toSignUpViewController" id="bXY-EE-O0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -248,4 +253,7 @@
     <resources>
         <image name="dineroFacilTutorial.jpg" width="1600" height="1067"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bXY-EE-O0k"/>
+    </inferredMetricsTieBreakers>
 </document>

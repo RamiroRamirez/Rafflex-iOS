@@ -104,9 +104,29 @@ class RXLoginFacebook               : RXLoginSignUpCell {
     override func setCell() {
         super.setCell()
         let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = [FacebookSDK.Email, FacebookSDK.PublicProfile]
+        loginButton.delegate = self
         loginButton.center = (self.facebookLoginView?.center ?? CGPoint.zero)
         self.facebookLoginView?.addSubview(loginButton)
         loginButton.matchParentConstraints()
+    }
+}
+
+extension RXLoginFacebook: FBSDKLoginButtonDelegate {
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        let facebookRequest = FBSDKGraphRequest(graphPath: FacebookSDK.Me, parameters: [FacebookSDK.Fields:FacebookSDK.NameEmail])
+        facebookRequest.startWithCompletionHandler { (connection : FBSDKGraphRequestConnection!, result : AnyObject!, error : NSError!) in
+            // TODO: Execute login with facebook infos
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        
+    }
+    
+    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
+        return true
     }
 }
 
