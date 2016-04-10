@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -49,7 +50,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Gu2-ld-YU0" kind="show" identifier="toLoginSignUpViewController" id="MJi-EB-NT2"/>
+                                    <action selector="openLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vud-YW-JGv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMG-Hh-ydN">
@@ -61,6 +62,9 @@
                                 <state key="normal" title="Registrate gratis">
                                     <color key="titleColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFh-mp-Df2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -81,6 +85,8 @@
                         <outlet property="loginButton" destination="cUC-Bk-1yk" id="H6V-Y8-jIJ"/>
                         <outlet property="pageContainerView" destination="4Q7-Qr-oDI" id="8x4-O1-B1K"/>
                         <outlet property="signUpButton" destination="dMG-Hh-ydN" id="W6a-W0-QPR"/>
+                        <segue destination="Gu2-ld-YU0" kind="show" identifier="toLoginViewController" id="FKq-1o-seD"/>
+                        <segue destination="Gu2-ld-YU0" kind="show" identifier="toSignUpViewController" id="bXY-EE-O0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,22 +101,97 @@
             </objects>
             <point key="canvasLocation" x="1046" y="387"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Login Sign Up View Controller-->
         <scene sceneID="OsB-tF-5kH">
             <objects>
-                <tableViewController id="Gu2-ld-YU0" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IXx-yG-taX">
+                <tableViewController id="Gu2-ld-YU0" customClass="RXLoginSignUpViewController" customModule="Rafflex_Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="210" sectionHeaderHeight="28" sectionFooterHeight="28" id="IXx-yG-taX">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gRA-Xy-2vJ">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginIconCell" rowHeight="210" id="gRA-Xy-2vJ" customClass="RXLoginIconCell" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="210"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gRA-Xy-2vJ" id="FP1-OU-1q7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dineroFacilTutorial.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3yY-YE-pJW">
+                                            <rect key="frame" x="225" y="30" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="3yY-YE-pJW" secondAttribute="height" multiplier="1:1" id="Dp6-B0-1pt"/>
+                                                <constraint firstAttribute="width" constant="150" id="fQ9-bw-RGX"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3yY-YE-pJW" firstAttribute="centerX" secondItem="FP1-OU-1q7" secondAttribute="centerX" id="J9V-cS-rgC"/>
+                                        <constraint firstItem="3yY-YE-pJW" firstAttribute="centerY" secondItem="FP1-OU-1q7" secondAttribute="centerY" id="djK-zb-B6h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="iconImageView" destination="3yY-YE-pJW" id="o0G-Nz-Frn"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginInputCell" rowHeight="44" id="uZ6-vF-mJ2" customClass="RXLoginInputCell" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="302" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uZ6-vF-mJ2" id="gPu-bl-miY">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFx-Ba-Xz8">
+                                            <rect key="frame" x="2" y="0.0" width="596" height="44"/>
+                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTj-qh-7cK">
+                                            <rect key="frame" x="0.0" y="43" width="600" height="1"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="cTm-Bz-t3k"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="WTj-qh-7cK" secondAttribute="bottom" id="75e-je-qoS"/>
+                                        <constraint firstItem="WTj-qh-7cK" firstAttribute="leading" secondItem="gPu-bl-miY" secondAttribute="leading" id="7Gc-CD-S8N"/>
+                                        <constraint firstAttribute="trailing" secondItem="VFx-Ba-Xz8" secondAttribute="trailing" constant="2" id="Hce-ei-tCf"/>
+                                        <constraint firstAttribute="trailing" secondItem="WTj-qh-7cK" secondAttribute="trailing" id="LHw-cF-A8z"/>
+                                        <constraint firstItem="WTj-qh-7cK" firstAttribute="centerX" secondItem="gPu-bl-miY" secondAttribute="centerX" id="TEG-oZ-mvn"/>
+                                        <constraint firstItem="VFx-Ba-Xz8" firstAttribute="leading" secondItem="gPu-bl-miY" secondAttribute="leading" constant="2" id="USp-cz-JOw"/>
+                                        <constraint firstItem="VFx-Ba-Xz8" firstAttribute="top" secondItem="gPu-bl-miY" secondAttribute="top" id="mLX-el-Qve"/>
+                                        <constraint firstAttribute="bottom" secondItem="VFx-Ba-Xz8" secondAttribute="bottom" id="mOp-UW-hL8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="inputTextField" destination="VFx-Ba-Xz8" id="Pxt-Oo-MnI"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginFacebookCell" rowHeight="44" id="HYl-ET-Gkp" customClass="RXLoginFacebook" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="346" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HYl-ET-Gkp" id="Jmy-Wo-veF">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-rE-upf">
+                                            <rect key="frame" x="1" y="1" width="598" height="42"/>
+                                            <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fcf-rE-upf" firstAttribute="top" secondItem="Jmy-Wo-veF" secondAttribute="top" constant="1" id="54C-YM-a0D"/>
+                                        <constraint firstAttribute="trailing" secondItem="fcf-rE-upf" secondAttribute="trailing" constant="1" id="Ouy-Bv-wat"/>
+                                        <constraint firstItem="fcf-rE-upf" firstAttribute="leading" secondItem="Jmy-Wo-veF" secondAttribute="leading" constant="1" id="US2-gZ-7hL"/>
+                                        <constraint firstAttribute="bottom" secondItem="fcf-rE-upf" secondAttribute="bottom" constant="1" id="dAK-yH-cOu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="facebookLoginView" destination="fcf-rE-upf" id="2Qe-xJ-d9J"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -169,4 +250,10 @@
             <point key="canvasLocation" x="1046" y="1124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dineroFacilTutorial.jpg" width="1600" height="1067"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bXY-EE-O0k"/>
+    </inferredMetricsTieBreakers>
 </document>

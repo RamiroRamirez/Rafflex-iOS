@@ -21,30 +21,30 @@ enum RXTutorial : Int {
     
     func image() -> String {
         switch self {
-        case .EasyMoney:      return "dineroFacilTutorial.jpg"
-        case .Loan:         return "prestamoTutorial.jpg"
-        case .Raffle:             return "rifaTutorial.jpg"
+        case .EasyMoney:        return "dineroFacilTutorial.jpg"
+        case .Loan:             return "prestamoTutorial.jpg"
+        case .Raffle:           return "rifaTutorial.jpg"
         }
     }
     
     func text() -> String {
         switch self {
-        case .EasyMoney:      return L("Initial.Page.Tutorial.First.Text")
-        case .Loan:         return L("Initial.Page.Tutorial.Second.Text")
-        case .Raffle:             return L("Initial.Page.Tutorial.Third.Text")
+        case .EasyMoney:        return L("Initial.Page.Tutorial.First.Text")
+        case .Loan:             return L("Initial.Page.Tutorial.Second.Text")
+        case .Raffle:           return L("Initial.Page.Tutorial.Third.Text")
         }
     }
 }
 
-class RXInitialViewController           : UIViewController {
+class RXInitialViewController                   : UIViewController {
 
     // MARK: - Outlets
-    @IBOutlet weak var loginButton      : UIButton?
-    @IBOutlet weak var signUpButton     : UIButton?
-    @IBOutlet weak var pageContainerView: UIView?
+    @IBOutlet private weak var loginButton      : UIButton?
+    @IBOutlet private weak var signUpButton     : UIButton?
+    @IBOutlet private weak var pageContainerView: UIView?
     
     // MARK: - Private properties
-    private var pageViewController      : RXInitialPageViewController?
+    private var pageViewController              : RXInitialPageViewController?
     
     // MARK: - Life cycle
     
@@ -117,6 +117,25 @@ class RXInitialViewController           : UIViewController {
         pageContentViewController?.pageindex = _index
         
         return pageContentViewController
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func openLogin(sender: AnyObject) {
+        self.performSegueWithIdentifier(SegueIds.ToLoginViewController, sender: nil)
+    }
+    
+    @IBAction func openSignIn(sender: AnyObject) {
+        self.performSegueWithIdentifier(SegueIds.ToSignUpViewController, sender: nil)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == SegueIds.ToSignUpViewController) {
+            let vc = segue.destinationViewController as? RXLoginSignUpViewController
+            vc?.loginSignUpType = .SignUp
+        }
     }
 }
 
