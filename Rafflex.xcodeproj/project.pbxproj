@@ -485,7 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ramiro Ramirez Hernandez (9A8JDE7M9P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ramiro Ramirez Hernandez (9A8JDE7M9P)";
 				CURRENT_PROJECT_VERSION = 1;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
@@ -515,7 +515,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D ALPHA -D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "109e945b-7159-4c3b-959e-8f868dd45c08";
+				PROVISIONING_PROFILE = "00802000-289c-435c-9a8f-c5f54423f13c";
 			};
 			name = Release;
 		};
@@ -534,7 +534,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D APPSTORE -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9d8e2798-25b1-4b26-8e69-1373a96bd435";
 			};
 			name = Debug;
 		};
@@ -553,7 +553,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) -D APPSTORE -D RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9d8e2798-25b1-4b26-8e69-1373a96bd435";
 			};
 			name = Release;
 		};
