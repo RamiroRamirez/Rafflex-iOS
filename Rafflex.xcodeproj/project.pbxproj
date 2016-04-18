@@ -484,7 +484,6 @@
 			baseConfigurationReference = 1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ramiro Ramirez Hernandez (9A8JDE7M9P)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -496,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "bb584486-ff4f-4653-bdb5-b0256c94db22";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -504,7 +504,6 @@
 			baseConfigurationReference = E2F2EF3E2AD91627EB7BE9E6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ramiro Ramirez Hernandez (WEUMM3X4MB)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ramiro Ramirez Hernandez (WEUMM3X4MB)";
 				CURRENT_PROJECT_VERSION = 1;
@@ -516,6 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "00802000-289c-435c-9a8f-c5f54423f13c";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -523,7 +523,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -535,6 +534,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9d8e2798-25b1-4b26-8e69-1373a96bd435";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -542,7 +542,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -554,6 +553,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ram.Rafflex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9d8e2798-25b1-4b26-8e69-1373a96bd435";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
