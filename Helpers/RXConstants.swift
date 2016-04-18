@@ -24,6 +24,7 @@ struct CellIdentifiers {
     
     static let LoginIconCell                    = "LoginIconCell"
     static let LoginInputCell                   = "LoginInputCell"
+    static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
 }
 

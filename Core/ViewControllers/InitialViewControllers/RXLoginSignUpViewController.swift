@@ -22,18 +22,19 @@ enum LoginSignUpRow: Int {
     case Email
     case Password
     case AgainPassword
+    case LoginSignup
     case Facebook
     
     static func allValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .AgainPassword, .Facebook]
+        return [.Icon, .Email, .Password, .AgainPassword, .LoginSignup, .Facebook]
     }
     
     static func loginValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .AgainPassword, .Facebook]
+        return [.Icon, .Email, .Password, .LoginSignup, .Facebook]
     }
     
     static func signUpValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .Facebook]
+        return [.Icon, .Email, .Password, .AgainPassword, .LoginSignup, .Facebook]
     }
     
     func reuseIdentifier() -> String {
@@ -42,6 +43,7 @@ enum LoginSignUpRow: Int {
         case .Email:        return CellIdentifiers.LoginInputCell
         case .Password:     return CellIdentifiers.LoginInputCell
         case .AgainPassword:return CellIdentifiers.LoginInputCell
+        case .LoginSignup:  return CellIdentifiers.LoginButtonCell
         case .Facebook:     return CellIdentifiers.LoginFacebook
         }
     }
@@ -52,6 +54,7 @@ enum LoginSignUpRow: Int {
         case .Email:            return L("Login.Placeholder.Email")
         case .Password:         return L("Login.Placeholder.Password")
         case .AgainPassword:    return L("Login.Placeholder.PasswordConfirm")
+        case .LoginSignup:      return nil
         case .Facebook:         return nil
         }
     }
@@ -62,23 +65,26 @@ enum LoginSignUpRow: Int {
         case .Email:            return CellHeights.InputCell
         case .Password:         return CellHeights.InputCell
         case .AgainPassword:    return CellHeights.InputCell
+        case .LoginSignup:      return CellHeights.InputCell
         case .Facebook:         return CellHeights.FacebookCell
         }
     }
 }
 
-class RXLoginSignUpCell             : UITableViewCell {
+class RXLoginSignUpCell                         : UITableViewCell {
     
-    var type                        : LoginSignUpRow?
+    var type                                    : LoginSignUpRow?
+    var loginSignupType                         : LoginSignUpType?
+    var executeLoginBlock                       : (() -> Void)?
     
     func setCell() {
         // please override in subclasses
     }
 }
 
-class RXLoginIconCell               : RXLoginSignUpCell {
+class RXLoginIconCell                           : RXLoginSignUpCell {
     
-    @IBOutlet private weak var iconImageView : UIImageView?
+    @IBOutlet private weak var iconImageView    : UIImageView?
     
     override func setCell() {
         super.setCell()
@@ -87,13 +93,28 @@ class RXLoginIconCell               : RXLoginSignUpCell {
     }
 }
 
-class RXLoginInputCell              : RXLoginSignUpCell {
+class RXLoginInputCell                          : RXLoginSignUpCell {
     
-    @IBOutlet private weak var inputTextField : UITextField?
+    @IBOutlet private weak var inputTextField   : UITextField?
     
     override func setCell() {
         super.setCell()
         self.inputTextField?.placeholder = self.type?.placeholder()
+    }
+}
+
+class RXLoginButtonCell                         : RXLoginSignUpCell {
+    
+    @IBOutlet private weak var loginButton      : UIButton?
+    
+    override func setCell() {
+        super.setCell()
+        let buttonTitle = ((self.loginSignupType == .Login) ? L("Login.Button.Login") : L("Login.Button.SignUp"))
+        self.loginButton?.setTitle(buttonTitle, forState: .Normal)
+    }
+    
+    @IBAction func executeLogin(sender: AnyObject) {
+        self.executeLoginBlock?()
     }
 }
 
@@ -146,6 +167,10 @@ class RXLoginSignUpViewController   : UITableViewController {
     func hideKeyboard() {
         self.view.endEditing(true)
     }
+    
+    func loginSignupPressed() {
+        self.performSegueWithIdentifier("toMainMenu", sender: nil)
+    }
 }
 
 // MARK: - Implementation TableViewDataSource/TableViewDelegate Protocols
@@ -167,6 +192,8 @@ extension RXLoginSignUpViewController {
             return UITableViewCell()
         }
         cell.type = loginRow
+        cell.loginSignupType = self.loginSignUpType
+        cell.executeLoginBlock = self.loginSignupPressed
         cell.setCell()
         return cell
     }

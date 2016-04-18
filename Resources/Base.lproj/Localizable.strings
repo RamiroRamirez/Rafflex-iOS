@@ -15,3 +15,6 @@
 "Login.Placeholder.Email"               = "Correo electrónico";
 "Login.Placeholder.Password"            = "Contraseña";
 "Login.Placeholder.PasswordConfirm"     = "Confirma contraseña";
+"Login.Button.Login"                    = "Iniciar sesión";
+"Login.Button.SignUp"                   = "Registrarse";
+
