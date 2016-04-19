@@ -10,6 +10,7 @@ import UIKit
 import DKHelper
 import FBSDKCoreKit
 import FBSDKLoginKit
+import MBProgressHUD
 
 enum LoginSignUpType: Int {
     case Login = 0
@@ -169,7 +170,9 @@ class RXLoginSignUpViewController   : UITableViewController {
     }
     
     func loginSignupPressed() {
-        self.performSegueWithIdentifier("toMainMenu", sender: nil)
+		if (self.loginSignUpType == .Login) {
+        	self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
+		}
     }
 }
 

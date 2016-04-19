@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
+		281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
+		281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */; };
+		281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */; };
+		281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
+		281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
+		281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
+		281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
 		8BA79AE7913B2E23AF2AE021 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */; };
 		B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */; };
 		B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */; };
@@ -37,6 +45,10 @@
 
 /* Begin PBXFileReference section */
 		1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXMainMenuViewController.swift; sourceTree = "<group>"; };
+		281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXCreateRaffleViewController.swift; sourceTree = "<group>"; };
+		281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXRafflesViewController.swift; sourceTree = "<group>"; };
+		281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoansViewController.swift; sourceTree = "<group>"; };
 		B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageContentViewController.swift; sourceTree = "<group>"; };
 		B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageViewController.swift; sourceTree = "<group>"; };
 		B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				B63AE61C1CA95D5B006FF012 /* InitialViewControllers */,
+				281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */,
+				281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */,
+				281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */,
+				281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -352,11 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */,
 				B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */,
+				281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
 				B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */,
+				281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
 				B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */,
+				281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
 				B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
 				B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */,
 			);
@@ -366,7 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
+				281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
+				281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
+				281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
 				B64B79EF1CA59B8100F4E771 /* AppDelegate.swift in Sources */,
 				B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */,
 				B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
