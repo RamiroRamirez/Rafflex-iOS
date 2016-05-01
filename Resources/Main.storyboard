@@ -250,8 +250,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="y9S-UL-XBP" kind="presentation" identifier="toCreateRaffle" modalTransitionStyle="coverVertical" id="I6O-8C-TgO"/>
-                        <segue destination="Y7d-7s-i2q" kind="presentation" identifier="toAskForALoan" modalTransitionStyle="crossDissolve" id="QMz-AU-3Rq"/>
+                        <segue destination="y9S-UL-XBP" kind="presentation" identifier="toCreateRaffle" customClass="UIStoryboardSegueFromTop" customModule="Rafflex_Alpha" customModuleProvider="target" modalTransitionStyle="crossDissolve" id="I6O-8C-TgO"/>
+                        <segue destination="Y7d-7s-i2q" kind="presentation" identifier="toAskForALoan" modalTransitionStyle="coverVertical" id="QMz-AU-3Rq"/>
                         <segue destination="mYc-ah-5M4" kind="presentation" identifier="toRafflesViewController" modalTransitionStyle="flipHorizontal" id="1zr-L2-egF"/>
                     </connections>
                 </viewController>

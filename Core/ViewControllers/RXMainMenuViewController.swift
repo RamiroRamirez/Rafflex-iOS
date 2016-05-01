@@ -18,6 +18,10 @@ class RXMainMenuViewController: UIViewController {
 		self.setGestureRecongnizers()
 	}
 
+	override func viewWillAppear(animated: Bool) {
+		self.navigationController?.navigationBarHidden = false
+	}
+
 	// MARK: - Private/ Configurations Methods
 
 	private func hideBackButton() {
@@ -43,6 +47,7 @@ class RXMainMenuViewController: UIViewController {
 	// MARK: - Gesture recognizers methods
 	
 	func createRaffle() {
+		self.navigationController?.navigationBarHidden = true
 		self.performSegueWithIdentifier(SegueIds.ToCreateRaffle, sender: nil)
 	}
 
@@ -52,5 +57,22 @@ class RXMainMenuViewController: UIViewController {
 
 	func askForALoan() {
 		self.performSegueWithIdentifier(SegueIds.ToLoansViewController, sender: nil)
+	}
+}
+
+class UIStoryboardSegueFromTop: UIStoryboardSegue {
+
+	override func perform() {
+		let src = self.sourceViewController as UIViewController
+		let dst = self.destinationViewController as UIViewController
+
+		src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+		dst.view.transform = CGAffineTransformMakeTranslation(0, -src.view.frame.size.height)
+
+		UIView.animateWithDuration(0.3, animations: {
+			dst.view.transform = CGAffineTransformMakeTranslation(0, 0)
+			}, completion: { (finished: Bool) in
+			src.presentViewController(dst, animated: false, completion: nil)
+		})
 	}
 }

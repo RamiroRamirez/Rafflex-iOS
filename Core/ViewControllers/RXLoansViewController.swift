@@ -18,7 +18,7 @@ class RXLoansViewController: UIViewController {
 	private func addGestureRecgnizer() {
 
 		let closeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.closeLoansView))
-		closeGestureRecognizer.direction = .Up
+		closeGestureRecognizer.direction = .Down
 		closeGestureRecognizer.delaysTouchesBegan = true
 		self.view.addGestureRecognizer(closeGestureRecognizer)
 	}
