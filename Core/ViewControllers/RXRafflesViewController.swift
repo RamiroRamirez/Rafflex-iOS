@@ -10,6 +10,8 @@ import UIKit
 
 class RXRafflesViewController: UIViewController {
 
+	// MARK: - Life cycle
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.addGestureRecgnizer()
