@@ -134,6 +134,8 @@ class RXLoginFacebook               : RXLoginSignUpCell {
     }
 }
 
+// MARK: - Implementation FBSDKLoginButtonDelegate protocol
+
 extension RXLoginFacebook: FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {

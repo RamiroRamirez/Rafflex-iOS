@@ -18,7 +18,7 @@ class RXMainMenuViewController: UIViewController {
 		self.setGestureRecongnizers()
 	}
 
-	// MARK: - Private Methods
+	// MARK: - Private/ Configurations Methods
 
 	private func hideBackButton() {
 		self.navigationItem.setHidesBackButton(true, animated: false)
@@ -26,7 +26,7 @@ class RXMainMenuViewController: UIViewController {
 
 	private func setGestureRecongnizers() {
 
-		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
+		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(self.askForALoan))
 		swipeCreateRaffle.direction = .Up
 		self.view.addGestureRecognizer(swipeCreateRaffle)
 
@@ -34,12 +34,14 @@ class RXMainMenuViewController: UIViewController {
 		swipeTakePartInRaffle.direction = .Right
 		self.view.addGestureRecognizer(swipeTakePartInRaffle)
 
-		let swipeAskForALoan = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.askForALoan))
+		let swipeAskForALoan = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
 		swipeAskForALoan.direction = .Down
 		self.view.addGestureRecognizer(swipeAskForALoan)
 
 	}
 
+	// MARK: - Gesture recognizers methods
+	
 	func createRaffle() {
 		self.performSegueWithIdentifier(SegueIds.ToCreateRaffle, sender: nil)
 	}
@@ -51,5 +53,4 @@ class RXMainMenuViewController: UIViewController {
 	func askForALoan() {
 		self.performSegueWithIdentifier(SegueIds.ToLoansViewController, sender: nil)
 	}
-
 }

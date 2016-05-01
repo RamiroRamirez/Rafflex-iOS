@@ -26,6 +26,4 @@ class RXRafflesViewController: UIViewController {
 	func closeRafflesView() {
 		self.dismissViewControllerAnimated(true, completion: nil)
 	}
-
-
 }
