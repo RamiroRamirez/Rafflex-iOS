@@ -30,15 +30,15 @@ class RXMainMenuViewController: UIViewController {
 
 	private func setGestureRecongnizers() {
 
-		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(self.askForALoan))
+		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(self.takePartInRaffle))
 		swipeCreateRaffle.direction = .Up
 		self.view.addGestureRecognizer(swipeCreateRaffle)
 
-		let swipeTakePartInRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.takePartInRaffle))
+		let swipeTakePartInRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
 		swipeTakePartInRaffle.direction = .Right
 		self.view.addGestureRecognizer(swipeTakePartInRaffle)
 
-		let swipeAskForALoan = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
+		let swipeAskForALoan = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.askForALoan))
 		swipeAskForALoan.direction = .Down
 		self.view.addGestureRecognizer(swipeAskForALoan)
 

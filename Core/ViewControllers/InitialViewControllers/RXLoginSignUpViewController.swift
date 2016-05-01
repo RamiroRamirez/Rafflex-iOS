@@ -25,17 +25,18 @@ enum LoginSignUpRow: Int {
     case AgainPassword
     case LoginSignup
     case Facebook
+	case Or
     
     static func allValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .AgainPassword, .LoginSignup, .Facebook]
+        return [.Icon, .Facebook, .Or, .Email, .Password, .AgainPassword, .LoginSignup]
     }
     
     static func loginValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .LoginSignup, .Facebook]
+        return [.Icon, .Facebook, .Or, .Email, .Password, .LoginSignup]
     }
     
     static func signUpValues() -> [LoginSignUpRow] {
-        return [.Icon, .Email, .Password, .AgainPassword, .LoginSignup, .Facebook]
+        return [.Icon, .Facebook, .Or, .Email, .Password, .AgainPassword, .LoginSignup]
     }
     
     func reuseIdentifier() -> String {
@@ -46,6 +47,7 @@ enum LoginSignUpRow: Int {
         case .AgainPassword:return CellIdentifiers.LoginInputCell
         case .LoginSignup:  return CellIdentifiers.LoginButtonCell
         case .Facebook:     return CellIdentifiers.LoginFacebook
+		case .Or:			return CellIdentifiers.LoginOr
         }
     }
     
@@ -57,6 +59,7 @@ enum LoginSignUpRow: Int {
         case .AgainPassword:    return L("Login.Placeholder.PasswordConfirm")
         case .LoginSignup:      return nil
         case .Facebook:         return nil
+		case .Or:				return nil
         }
     }
     
@@ -68,24 +71,25 @@ enum LoginSignUpRow: Int {
         case .AgainPassword:    return CellHeights.InputCell
         case .LoginSignup:      return CellHeights.InputCell
         case .Facebook:         return CellHeights.FacebookCell
+		case .Or:				return CellHeights.InputCell
         }
     }
 }
 
-class RXLoginSignUpCell                         : UITableViewCell {
+class RXLoginSignUpCell                         	: UITableViewCell {
     
-    var type                                    : LoginSignUpRow?
-    var loginSignupType                         : LoginSignUpType?
-    var executeLoginBlock                       : (() -> Void)?
+    var type                                    	: LoginSignUpRow?
+    var loginSignupType                         	: LoginSignUpType?
+    var executeLoginBlock                       	: (() -> Void)?
     
     func setCell() {
         // please override in subclasses
     }
 }
 
-class RXLoginIconCell                           : RXLoginSignUpCell {
+class RXLoginIconCell                           	: RXLoginSignUpCell {
     
-    @IBOutlet private weak var iconImageView    : UIImageView?
+    @IBOutlet private weak var iconImageView   	 	: UIImageView?
     
     override func setCell() {
         super.setCell()
@@ -94,9 +98,9 @@ class RXLoginIconCell                           : RXLoginSignUpCell {
     }
 }
 
-class RXLoginInputCell                          : RXLoginSignUpCell {
+class RXLoginInputCell                          	: RXLoginSignUpCell {
     
-    @IBOutlet private weak var inputTextField   : UITextField?
+    @IBOutlet private weak var inputTextField   	: UITextField?
     
     override func setCell() {
         super.setCell()
@@ -104,10 +108,10 @@ class RXLoginInputCell                          : RXLoginSignUpCell {
     }
 }
 
-class RXLoginButtonCell                         : RXLoginSignUpCell {
+class RXLoginButtonCell                         	: RXLoginSignUpCell {
     
-    @IBOutlet private weak var loginButton      : UIButton?
-    
+    @IBOutlet private weak var loginButton      	: UIButton?
+
     override func setCell() {
         super.setCell()
         let buttonTitle = ((self.loginSignupType == .Login) ? L("Login.Button.Login") : L("Login.Button.SignUp"))
@@ -119,9 +123,9 @@ class RXLoginButtonCell                         : RXLoginSignUpCell {
     }
 }
 
-class RXLoginFacebook               : RXLoginSignUpCell {
+class RXLoginFacebook               				: RXLoginSignUpCell {
     
-    @IBOutlet private weak var facebookLoginView : UIView?
+    @IBOutlet private weak var facebookLoginView 	: UIView?
     
     override func setCell() {
         super.setCell()
@@ -132,6 +136,16 @@ class RXLoginFacebook               : RXLoginSignUpCell {
         self.facebookLoginView?.addSubview(loginButton)
         loginButton.matchParentConstraints()
     }
+}
+
+class RXLoginOr										: RXLoginSignUpCell {
+
+	@IBOutlet private weak var orLabel 				: UILabel?
+
+	override func setCell() {
+		super.setCell()
+		self.orLabel?.text = L("Or")
+	}
 }
 
 // MARK: - Implementation FBSDKLoginButtonDelegate protocol

@@ -20,17 +20,12 @@ class RXCreateRaffleViewController: UIViewController {
 	private func addGestureRecgnizer() {
 
 		let closeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.closeCreateRaffleView))
-		closeGestureRecognizer.direction = .Up
+		closeGestureRecognizer.direction = .Left
 		closeGestureRecognizer.delaysTouchesBegan = true
 		self.view.addGestureRecognizer(closeGestureRecognizer)
 	}
 
 	func closeCreateRaffleView() {
-		self.view.window?.backgroundColor = UIColor.whiteColor()
-		UIView.animateWithDuration(0.3, animations: {
-			self.view.transform = CGAffineTransformMakeTranslation(0, -self.view.frame.size.height)
-			}, completion: { (finished: Bool) in
-				self.dismissViewControllerAnimated(true, completion: nil)
-		})
+		self.dismissViewControllerAnimated(true, completion: nil)
 	}
 }
