@@ -15,3 +15,5 @@
 "Login.Placeholder.Email"               = "Email address";
 "Login.Placeholder.Password"            = "Password";
 "Login.Placeholder.PasswordConfirm"     = "Repeat password";
+"Login.Button.Login"                    = "Sign in";
+"Login.Button.SignUp"                   = "Sign up";

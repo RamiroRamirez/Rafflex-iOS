@@ -18,12 +18,17 @@ struct SegueIds {
 
     static let ToLoginViewController            = "toLoginViewController"
     static let ToSignUpViewController           = "toSignUpViewController"
+	static let ToMainMenuViewController			= "toMainMenu"
+	static let ToCreateRaffle					= "toCreateRaffle"
+	static let ToRaffleViewController			= "toRafflesViewController"
+	static let ToLoansViewController			= "toAskForALoan"
 }
 
 struct CellIdentifiers {
     
     static let LoginIconCell                    = "LoginIconCell"
     static let LoginInputCell                   = "LoginInputCell"
+    static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
 }
 
