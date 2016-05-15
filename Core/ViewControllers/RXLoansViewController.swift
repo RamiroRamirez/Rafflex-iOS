@@ -10,6 +10,8 @@ import UIKit
 
 class RXLoansViewController: UIViewController {
 
+	// MARK: - Life cycle
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.addGestureRecgnizer()
@@ -24,6 +26,11 @@ class RXLoansViewController: UIViewController {
 	}
 
 	func closeLoansView() {
-		self.dismissViewControllerAnimated(true, completion: nil)
+		self.view.window?.backgroundColor = UIColor.whiteColor()
+		UIView.animateWithDuration(0.3, animations: {
+			self.view.transform = CGAffineTransformMakeTranslation(0, -self.view.frame.size.height)
+			}, completion: { (finished: Bool) in
+				self.dismissViewControllerAnimated(true, completion: nil)
+		})
 	}
 }

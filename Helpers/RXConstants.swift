@@ -30,6 +30,9 @@ struct CellIdentifiers {
     static let LoginInputCell                   = "LoginInputCell"
     static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
+	static let LoginOr							= "LoginOr"
+	static let RaffleCategoryCell				= "CategoryCell"
+	static let RaffleGroupCell					= "GroupCell"
 }
 
 struct CellHeights {
