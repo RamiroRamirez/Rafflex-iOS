@@ -36,9 +36,10 @@ struct CellIdentifiers {
 }
 
 struct CellHeights {
-    static let IconCell: CGFloat                = 210
-    static let InputCell: CGFloat               = 44
-    static let FacebookCell: CGFloat            = 54
+    static let IconCell                         : CGFloat = 210
+    static let InputCell                        : CGFloat = 44
+    static let FacebookCell                     : CGFloat = 54
+    static let RaffleCell                       : CGFloat = 210
 }
 
 struct CornerRadius {

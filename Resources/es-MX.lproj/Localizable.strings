@@ -17,3 +17,4 @@
 "Login.Placeholder.PasswordConfirm"     = "Confirma contraseña";
 "Login.Button.Login"                    = "Iniciar sesión";
 "Login.Button.SignUp"                   = "Registrarse";
+"Login.Or"                              = "ó";

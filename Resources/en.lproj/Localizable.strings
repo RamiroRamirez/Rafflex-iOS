@@ -17,3 +17,4 @@
 "Login.Placeholder.PasswordConfirm"     = "Repeat password";
 "Login.Button.Login"                    = "Sign in";
 "Login.Button.SignUp"                   = "Sign up";
+"Login.Or"                              = "or";

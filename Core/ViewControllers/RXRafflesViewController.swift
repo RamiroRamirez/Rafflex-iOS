@@ -44,6 +44,7 @@ class RXRafflesViewController		: UIViewController {
 extension RXRafflesViewController				: UITableViewDelegate, UITableViewDataSource {
 
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // for now, we return a harcoded 2 just to see some cell
 		return 2
 	}
 
@@ -57,7 +58,7 @@ extension RXRafflesViewController				: UITableViewDelegate, UITableViewDataSourc
 	}
 
 	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-		return 210
+		return CellHeights.RaffleCell
 	}
 }
 
@@ -79,6 +80,7 @@ class RXCategoryCell							: UITableViewCell {
 extension RXCategoryCell						: UICollectionViewDelegate, UICollectionViewDataSource {
 
 	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // returning a hardcoded value to show dummy views
 		return 4
 	}
 
@@ -86,7 +88,6 @@ extension RXCategoryCell						: UICollectionViewDelegate, UICollectionViewDataSo
 		guard let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifiers.RaffleGroupCell, forIndexPath: indexPath) as? RXRaffleCollectionViewCell else {
 			return UICollectionViewCell()
 		}
-		cell.raffleGroupLabel?.text = "Algo"
 		return cell
 	}
 }
