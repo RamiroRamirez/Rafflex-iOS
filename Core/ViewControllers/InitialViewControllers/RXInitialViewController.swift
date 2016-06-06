@@ -39,11 +39,13 @@ enum RXTutorial : Int {
 class RXInitialViewController                   : UIViewController {
 
     // MARK: - Outlets
+
     @IBOutlet private weak var loginButton      : UIButton?
     @IBOutlet private weak var signUpButton     : UIButton?
     @IBOutlet private weak var pageContainerView: UIView?
     
     // MARK: - Private properties
+
     private var pageViewController              : RXInitialPageViewController?
     
     // MARK: - Life cycle
@@ -64,7 +66,9 @@ class RXInitialViewController                   : UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBarHidden = false
     }
-    
+
+	// MARK: - Configurations
+
     /**
      Method to create page controller
      */
@@ -138,6 +142,8 @@ class RXInitialViewController                   : UIViewController {
         }
     }
 }
+
+// MARK: - Page controller protocol implementation
 
 extension RXInitialViewController       : UIPageViewControllerDataSource {
     

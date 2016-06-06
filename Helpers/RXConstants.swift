@@ -30,12 +30,16 @@ struct CellIdentifiers {
     static let LoginInputCell                   = "LoginInputCell"
     static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
+	static let LoginOr							= "LoginOr"
+	static let RaffleCategoryCell				= "CategoryCell"
+	static let RaffleGroupCell					= "GroupCell"
 }
 
 struct CellHeights {
-    static let IconCell: CGFloat                = 210
-    static let InputCell: CGFloat               = 44
-    static let FacebookCell: CGFloat            = 54
+    static let IconCell                         : CGFloat = 210
+    static let InputCell                        : CGFloat = 44
+    static let FacebookCell                     : CGFloat = 54
+    static let RaffleCell                       : CGFloat = 210
 }
 
 struct CornerRadius {

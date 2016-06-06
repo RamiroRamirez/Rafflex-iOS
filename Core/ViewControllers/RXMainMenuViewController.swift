@@ -18,7 +18,12 @@ class RXMainMenuViewController: UIViewController {
 		self.setGestureRecongnizers()
 	}
 
-	// MARK: - Private Methods
+	override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+		self.navigationController?.navigationBarHidden = false
+	}
+
+	// MARK: - Private/ Configurations Methods
 
 	private func hideBackButton() {
 		self.navigationItem.setHidesBackButton(true, animated: false)
@@ -26,11 +31,11 @@ class RXMainMenuViewController: UIViewController {
 
 	private func setGestureRecongnizers() {
 
-		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
+		let swipeCreateRaffle = UISwipeGestureRecognizer(target: self, action: #selector(self.takePartInRaffle))
 		swipeCreateRaffle.direction = .Up
 		self.view.addGestureRecognizer(swipeCreateRaffle)
 
-		let swipeTakePartInRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.takePartInRaffle))
+		let swipeTakePartInRaffle = UISwipeGestureRecognizer(target: self, action: #selector(RXMainMenuViewController.createRaffle))
 		swipeTakePartInRaffle.direction = .Right
 		self.view.addGestureRecognizer(swipeTakePartInRaffle)
 
@@ -40,7 +45,10 @@ class RXMainMenuViewController: UIViewController {
 
 	}
 
+	// MARK: - Gesture recognizers methods
+	
 	func createRaffle() {
+		self.navigationController?.navigationBarHidden = true
 		self.performSegueWithIdentifier(SegueIds.ToCreateRaffle, sender: nil)
 	}
 
@@ -51,5 +59,21 @@ class RXMainMenuViewController: UIViewController {
 	func askForALoan() {
 		self.performSegueWithIdentifier(SegueIds.ToLoansViewController, sender: nil)
 	}
+}
 
+class UIStoryboardSegueFromTop: UIStoryboardSegue {
+
+	override func perform() {
+		let src = self.sourceViewController as UIViewController
+		let dst = self.destinationViewController as UIViewController
+
+		src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+		dst.view.transform = CGAffineTransformMakeTranslation(0, -src.view.frame.size.height)
+
+		UIView.animateWithDuration(0.3, animations: {
+			dst.view.transform = CGAffineTransformMakeTranslation(0, 0)
+			}, completion: { (finished: Bool) in
+			src.presentViewController(dst, animated: false, completion: nil)
+		})
+	}
 }

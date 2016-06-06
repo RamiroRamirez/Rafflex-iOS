@@ -10,6 +10,8 @@ import UIKit
 
 class RXCreateRaffleViewController: UIViewController {
 
+	// MARK: - Life cycle
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.addGestureRecgnizer()
@@ -18,7 +20,7 @@ class RXCreateRaffleViewController: UIViewController {
 	private func addGestureRecgnizer() {
 
 		let closeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.closeCreateRaffleView))
-		closeGestureRecognizer.direction = .Down
+		closeGestureRecognizer.direction = .Left
 		closeGestureRecognizer.delaysTouchesBegan = true
 		self.view.addGestureRecognizer(closeGestureRecognizer)
 	}
@@ -26,5 +28,4 @@ class RXCreateRaffleViewController: UIViewController {
 	func closeCreateRaffleView() {
 		self.dismissViewControllerAnimated(true, completion: nil)
 	}
-
 }
