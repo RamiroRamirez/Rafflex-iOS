@@ -9,37 +9,12 @@
 import UIKit
 import DKHelper
 
-enum RXTutorial : Int {
-    
-    case EasyMoney = 0
-    case Loan
-    case Raffle
-    
-    static func allValues() -> [RXTutorial] {
-        return [.EasyMoney, .Loan, .Raffle]
-    }
-    
-    func image() -> String {
-        switch self {
-        case .EasyMoney:        return "dineroFacilTutorial.jpg"
-        case .Loan:             return "prestamoTutorial.jpg"
-        case .Raffle:           return "rifaTutorial.jpg"
-        }
-    }
-    
-    func text() -> String {
-        switch self {
-        case .EasyMoney:        return L("Initial.Page.Tutorial.First.Text")
-        case .Loan:             return L("Initial.Page.Tutorial.Second.Text")
-        case .Raffle:           return L("Initial.Page.Tutorial.Third.Text")
-        }
-    }
-}
-
 class RXInitialViewController                   : UIViewController {
 
     // MARK: - Outlets
 
+	@IBOutlet weak var pageControl		: UIPageControl?
+	@IBOutlet weak var welcomeScrollView: UIScrollView?
     @IBOutlet private weak var loginButton      : UIButton?
     @IBOutlet private weak var signUpButton     : UIButton?
 
@@ -48,6 +23,8 @@ class RXInitialViewController                   : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configurateButtoons()
+		self.pageControl?.backgroundColor = UIColor.clearColor()
+		self.view.bringSubviewToFront(self.pageControl!)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -59,6 +36,11 @@ class RXInitialViewController                   : UIViewController {
         super.viewWillDisappear(animated)
         self.navigationController?.navigationBarHidden = false
     }
+
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		self.scrollViewSetup()
+	}
 
 	// MARK: - Configurations
     

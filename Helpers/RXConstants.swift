@@ -44,7 +44,11 @@ struct CellHeights {
 
 struct CornerRadius {
     
-    static let StandardCornerRadius : CGFloat   = 5.0
+    static let StandardCornerRadius 			: CGFloat = 5.0
+}
+
+struct XibFiles {
+	static let WelcomeView						= "RXWelcomeView"
 }
 
 struct FacebookSDK {
