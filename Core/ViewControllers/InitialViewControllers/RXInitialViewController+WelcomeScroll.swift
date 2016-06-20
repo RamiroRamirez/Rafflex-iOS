@@ -68,3 +68,13 @@ extension RXInitialViewController {
 		self.welcomeScrollView?.contentSize = CGSize(width: scrollWidth, height: scrollHeight)
 	}
 }
+
+extension RXInitialViewController: UIScrollViewDelegate {
+
+	func scrollViewDidScroll(scrollView: UIScrollView) {
+		if (scrollView.frameWidth != 0) {
+			let actualPage = Int(scrollView.contentOffset.x / scrollView.frameWidth)
+			self.pageControl?.currentPage = actualPage
+		}
+	}
+}

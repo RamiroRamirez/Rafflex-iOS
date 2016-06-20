@@ -62,7 +62,19 @@ enum LoginSignUpRow: Int {
 		case .Or:				return nil
         }
     }
-    
+
+	func imageForInputCell() -> String? {
+		switch self {
+		case .Icon:             return nil
+		case .Email:            return "Mail"
+		case .Password:         return "Lock"
+		case .AgainPassword:    return "Lock"
+		case .LoginSignup:      return nil
+		case .Facebook:         return nil
+		case .Or:				return nil
+		}
+	}
+
     func cellHeight() -> CGFloat {
         switch self {
         case .Icon:             return CellHeights.IconCell
@@ -101,10 +113,14 @@ class RXLoginIconCell                           	: RXLoginSignUpCell {
 class RXLoginInputCell                          	: RXLoginSignUpCell {
     
     @IBOutlet private weak var inputTextField   	: UITextField?
+	@IBOutlet private weak var inputImageView				: UIImageView?
     
     override func setCell() {
         super.setCell()
         self.inputTextField?.placeholder = self.type?.placeholder()
+		if let _imageName = self.type?.imageForInputCell() {
+			self.inputImageView?.image = UIImage(named: _imageName)
+		}
     }
 }
 
@@ -144,7 +160,7 @@ class RXLoginOr										: RXLoginSignUpCell {
 
 	override func setCell() {
 		super.setCell()
-		self.orLabel?.text = L("Or")
+		self.orLabel?.text = L("Login.Or")
 	}
 }
 
@@ -176,6 +192,7 @@ class RXLoginSignUpViewController   : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.setBackroungImage()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RXLoginSignUpViewController.hideKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -184,12 +201,21 @@ class RXLoginSignUpViewController   : UITableViewController {
     func hideKeyboard() {
         self.view.endEditing(true)
     }
+
+
     
-    func loginSignupPressed() {
+    private func loginSignupPressed() {
 		if (self.loginSignUpType == .Login) {
         	self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
 		}
     }
+
+	private func setBackroungImage() {
+		let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+		backgroundImage.image = UIImage(named: "Splash")
+		self.view.addSubview(backgroundImage)
+		self.view.sendSubviewToBack(backgroundImage)
+	}
 }
 
 // MARK: - Implementation TableViewDataSource/TableViewDelegate Protocols

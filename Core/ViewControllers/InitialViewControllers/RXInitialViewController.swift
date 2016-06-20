@@ -13,8 +13,8 @@ class RXInitialViewController                   : UIViewController {
 
     // MARK: - Outlets
 
-	@IBOutlet weak var pageControl		: UIPageControl?
-	@IBOutlet weak var welcomeScrollView: UIScrollView?
+	@IBOutlet weak var pageControl				: UIPageControl?
+	@IBOutlet weak var welcomeScrollView		: UIScrollView?
     @IBOutlet private weak var loginButton      : UIButton?
     @IBOutlet private weak var signUpButton     : UIButton?
 
@@ -24,7 +24,6 @@ class RXInitialViewController                   : UIViewController {
         super.viewDidLoad()
         self.configurateButtoons()
 		self.pageControl?.backgroundColor = UIColor.clearColor()
-		self.view.bringSubviewToFront(self.pageControl!)
     }
     
     override func viewWillAppear(animated: Bool) {
