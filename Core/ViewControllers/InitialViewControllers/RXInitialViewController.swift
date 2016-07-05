@@ -33,7 +33,6 @@ class RXInitialViewController                   : UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBarHidden = false
     }
 
 	override func viewDidLayoutSubviews() {
