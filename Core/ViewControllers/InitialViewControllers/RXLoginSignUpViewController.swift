@@ -26,13 +26,14 @@ enum LoginSignUpRow: Int {
     case LoginSignup
     case Facebook
 	case Or
+    case ForgotPassword
     
     static func allValues() -> [LoginSignUpRow] {
         return [.Icon, .Facebook, .Or, .Email, .Password, .AgainPassword, .LoginSignup]
     }
     
     static func loginValues() -> [LoginSignUpRow] {
-        return [.Icon, .Facebook, .Or, .Email, .Password, .LoginSignup]
+        return [.Icon, .Facebook, .Or, .Email, .Password, .LoginSignup, .ForgotPassword]
     }
     
     static func signUpValues() -> [LoginSignUpRow] {
@@ -41,13 +42,14 @@ enum LoginSignUpRow: Int {
     
     func reuseIdentifier() -> String {
         switch self {
-        case .Icon:         return CellIdentifiers.LoginIconCell
-        case .Email:        return CellIdentifiers.LoginInputCell
-        case .Password:     return CellIdentifiers.LoginInputCell
-        case .AgainPassword:return CellIdentifiers.LoginInputCell
-        case .LoginSignup:  return CellIdentifiers.LoginButtonCell
-        case .Facebook:     return CellIdentifiers.LoginFacebook
-		case .Or:			return CellIdentifiers.LoginOr
+        case .Icon:             return CellIdentifiers.LoginIconCell
+        case .Email:            return CellIdentifiers.LoginInputCell
+        case .Password:         return CellIdentifiers.LoginInputCell
+        case .AgainPassword:    return CellIdentifiers.LoginInputCell
+        case .LoginSignup:      return CellIdentifiers.LoginButtonCell
+        case .Facebook:         return CellIdentifiers.LoginFacebook
+		case .Or:               return CellIdentifiers.LoginOr
+        case .ForgotPassword:   return CellIdentifiers.ForgotPassword
         }
     }
     
@@ -60,18 +62,33 @@ enum LoginSignUpRow: Int {
         case .LoginSignup:      return nil
         case .Facebook:         return nil
 		case .Or:				return nil
+        case .ForgotPassword:   return nil
         }
     }
-    
+
+	func imageForInputCell() -> String? {
+		switch self {
+		case .Icon:             return nil
+		case .Email:            return "Mail"
+		case .Password:         return "Lock"
+		case .AgainPassword:    return "Lock"
+		case .LoginSignup:      return nil
+		case .Facebook:         return nil
+		case .Or:				return nil
+        case .ForgotPassword:   return nil
+		}
+	}
+
     func cellHeight() -> CGFloat {
         switch self {
         case .Icon:             return CellHeights.IconCell
         case .Email:            return CellHeights.InputCell
         case .Password:         return CellHeights.InputCell
         case .AgainPassword:    return CellHeights.InputCell
-        case .LoginSignup:      return CellHeights.InputCell
+        case .LoginSignup:      return CellHeights.LoginButtonCell
         case .Facebook:         return CellHeights.FacebookCell
 		case .Or:				return CellHeights.InputCell
+        case .ForgotPassword:   return CellHeights.LoginButtonCell
         }
     }
 }
@@ -81,30 +98,54 @@ class RXLoginSignUpCell                         	: UITableViewCell {
     var type                                    	: LoginSignUpRow?
     var loginSignupType                         	: LoginSignUpType?
     var executeLoginBlock                       	: (() -> Void)?
+    var dismissBlock                                : (() -> Void)?
     
     func setCell() {
         // please override in subclasses
     }
 }
 
-class RXLoginIconCell                           	: RXLoginSignUpCell {
+class RXLoginForgotPassword                         : RXLoginSignUpCell {
     
-    @IBOutlet private weak var iconImageView   	 	: UIImageView?
+    @IBOutlet private weak var forgotPasswordButton : UIButton?
     
     override func setCell() {
         super.setCell()
-        // TODO: Put the icon of the app
-//        self.iconImageView?.image = UIImage()
+        self.forgotPasswordButton?.setTitle(L("Login.Label.ForgotPassword"), forState: .Normal)
+    }
+}
+
+class RXLoginIconCell                           	: RXLoginSignUpCell {
+    
+    @IBOutlet private weak var iconImageView   	 	: UIImageView?
+    @IBOutlet weak var closeButton                  : UIButton?
+    
+    override func setCell() {
+        super.setCell()
+        self.closeButton?.setImage(UIImage(named: "ic_close")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
+        self.closeButton?.tintColor = UIColor.whiteColor()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func dismissView(sender: AnyObject) {
+        self.dismissBlock?()
     }
 }
 
 class RXLoginInputCell                          	: RXLoginSignUpCell {
     
     @IBOutlet private weak var inputTextField   	: UITextField?
+	@IBOutlet private weak var inputImageView		: UIImageView?
     
     override func setCell() {
         super.setCell()
-        self.inputTextField?.placeholder = self.type?.placeholder()
+        if let _placeholder = self.type?.placeholder() {
+            self.inputTextField?.attributedPlaceholder = NSAttributedString(string:_placeholder, attributes:[NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.4)])
+        }
+		if let _imageName = self.type?.imageForInputCell() {
+			self.inputImageView?.image = UIImage(named: _imageName)
+		}
     }
 }
 
@@ -144,7 +185,7 @@ class RXLoginOr										: RXLoginSignUpCell {
 
 	override func setCell() {
 		super.setCell()
-		self.orLabel?.text = L("Or")
+		self.orLabel?.text = L("Login.Or")
 	}
 }
 
@@ -176,6 +217,7 @@ class RXLoginSignUpViewController   : UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.setBackroungImage()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RXLoginSignUpViewController.hideKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         self.tableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -184,11 +226,24 @@ class RXLoginSignUpViewController   : UITableViewController {
     func hideKeyboard() {
         self.view.endEditing(true)
     }
+
+    // MARK: - Private Methods
     
-    func loginSignupPressed() {
+    private func loginSignupPressed() {
 		if (self.loginSignUpType == .Login) {
         	self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
 		}
+    }
+
+	private func setBackroungImage() {
+		let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+		backgroundImage.image = UIImage(named: "Splash")
+		self.view.addSubview(backgroundImage)
+		self.view.sendSubviewToBack(backgroundImage)
+	}
+    
+    private func dismissView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
@@ -213,6 +268,7 @@ extension RXLoginSignUpViewController {
         cell.type = loginRow
         cell.loginSignupType = self.loginSignUpType
         cell.executeLoginBlock = self.loginSignupPressed
+        cell.dismissBlock = self.dismissView
         cell.setCell()
         return cell
     }

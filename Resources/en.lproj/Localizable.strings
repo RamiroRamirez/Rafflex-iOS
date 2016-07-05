@@ -18,3 +18,4 @@
 "Login.Button.Login"                    = "Sign in";
 "Login.Button.SignUp"                   = "Sign up";
 "Login.Or"                              = "or";
+"Login.Label.ForgotPassword"            = "Did you forgot your password?";
