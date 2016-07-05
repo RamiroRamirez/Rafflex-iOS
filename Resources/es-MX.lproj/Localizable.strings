@@ -18,3 +18,4 @@
 "Login.Button.Login"                    = "Iniciar sesión";
 "Login.Button.SignUp"                   = "Registrarse";
 "Login.Or"                              = "ó";
+"Login.Label.ForgotPassword"            = "¿Olvidaste tu contraseña?";
