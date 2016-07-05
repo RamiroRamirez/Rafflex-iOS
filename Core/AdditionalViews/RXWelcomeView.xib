@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HDInitialViewController" customModule="Rafflex_Alpha" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RXWelcomeView" customModule="Rafflex_Alpha" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KHe-c8-TTB">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGb-8F-l1W">
+                    <rect key="frame" x="8" y="327" width="584" height="93"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="93" id="zLC-TP-2Mu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KHe-c8-TTB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Lg-Ox-8jr"/>
+                <constraint firstAttribute="trailing" secondItem="KHe-c8-TTB" secondAttribute="trailing" id="2xT-k6-keQ"/>
+                <constraint firstItem="KHe-c8-TTB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Afy-eX-NWB"/>
+                <constraint firstAttribute="trailing" secondItem="wGb-8F-l1W" secondAttribute="trailing" constant="8" id="B7S-x1-lsf"/>
+                <constraint firstAttribute="bottom" secondItem="wGb-8F-l1W" secondAttribute="bottom" constant="180" id="HPg-BH-ZPq"/>
+                <constraint firstAttribute="bottom" secondItem="KHe-c8-TTB" secondAttribute="bottom" id="e1u-Rg-0Pl"/>
+                <constraint firstItem="wGb-8F-l1W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="vBW-GR-NQe"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="wGb-8F-l1W" id="dyR-Y7-2ug"/>
+                <outlet property="welcomeImageView" destination="KHe-c8-TTB" id="tEt-5p-0XX"/>
+            </connections>
+        </view>
+    </objects>
+</document>

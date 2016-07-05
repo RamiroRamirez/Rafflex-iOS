@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum UserDefault							: String {
+    // Keys set in PList files
+    case APIBaseURL							= "ApiBaseURL"
+}
+
 struct StoryboardIds {
     
     static let InitialPageViewController        = "RXInitialPageViewController"
@@ -31,6 +36,7 @@ struct CellIdentifiers {
     static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
 	static let LoginOr							= "LoginOr"
+    static let ForgotPassword                   = "ForgotPasswordCell"
 	static let RaffleCategoryCell				= "CategoryCell"
 	static let RaffleGroupCell					= "GroupCell"
 }
@@ -38,13 +44,18 @@ struct CellIdentifiers {
 struct CellHeights {
     static let IconCell                         : CGFloat = 210
     static let InputCell                        : CGFloat = 44
+    static let LoginButtonCell                  : CGFloat = 70
     static let FacebookCell                     : CGFloat = 54
     static let RaffleCell                       : CGFloat = 210
 }
 
 struct CornerRadius {
     
-    static let StandardCornerRadius : CGFloat   = 5.0
+    static let StandardCornerRadius 			: CGFloat = 5.0
+}
+
+struct XibFiles {
+	static let WelcomeView						= "RXWelcomeView"
 }
 
 struct FacebookSDK {

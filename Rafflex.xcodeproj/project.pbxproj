@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280D3A181D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D3A171D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift */; };
+		280D3A191D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D3A171D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift */; };
+		280D3A1D1D1093B700FAB68C /* RXWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */; };
+		280D3A1E1D1093B700FAB68C /* RXWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */; };
+		280D3A1F1D1093B700FAB68C /* RXWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */; };
+		280D3A201D1093B700FAB68C /* RXWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */; };
+		2811EEB71D08B68E00A59DDF /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */; };
 		281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
 		281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
 		281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */; };
@@ -15,9 +22,10 @@
 		281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
 		281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
 		281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
-		8BA79AE7913B2E23AF2AE021 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */; };
-		B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */; };
-		B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */; };
+		6E5317DFCEE23EFAE0AD91C7 /* Pods_Rafflex_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */; };
+		8BF576EE7D001EF001EE4573 /* Pods_Rafflex_Alpha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */; };
+		B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */; };
+		B60ACF061D25B2E000E63D8A /* RXAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */; };
 		B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */; };
 		B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */; };
 		B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */; };
@@ -44,13 +52,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		1557BA225A72C9CAECAF0B3A /* Pods-Rafflex-AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-AppStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		280D3A171D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RXInitialViewController+WelcomeScroll.swift"; sourceTree = "<group>"; };
+		280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXWelcomeView.swift; sourceTree = "<group>"; };
+		280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXWelcomeView.xib; sourceTree = "<group>"; };
 		281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXMainMenuViewController.swift; sourceTree = "<group>"; };
 		281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXCreateRaffleViewController.swift; sourceTree = "<group>"; };
 		281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXRafflesViewController.swift; sourceTree = "<group>"; };
 		281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoansViewController.swift; sourceTree = "<group>"; };
-		B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageContentViewController.swift; sourceTree = "<group>"; };
-		B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialPageViewController.swift; sourceTree = "<group>"; };
+		4DC064B085CFEC17EC5FE644 /* Pods-Rafflex-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B93D60F3B281AF3ED29E130 /* Pods-Rafflex-Alpha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-Alpha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha.debug.xcconfig"; sourceTree = "<group>"; };
+		93E1DA66A132B98160BAB7E1 /* Pods-Rafflex-Alpha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-Alpha.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha.release.xcconfig"; sourceTree = "<group>"; };
+		B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXAPIManager.swift; sourceTree = "<group>"; };
 		B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXInitialViewController.swift; sourceTree = "<group>"; };
 		B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoginSignUpViewController.swift; sourceTree = "<group>"; };
 		B64B79BC1CA5949500F4E771 /* Rafflex-Alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rafflex-Alpha.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +85,7 @@
 		B64B7A311CA5F75200F4E771 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B64B7A321CA5F75E00F4E771 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2F2EF3E2AD91627EB7BE9E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_Alpha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA79AE7913B2E23AF2AE021 /* Pods.framework in Frameworks */,
+				8BF576EE7D001EF001EE4573 /* Pods_Rafflex_Alpha.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,18 +101,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5317DFCEE23EFAE0AD91C7 /* Pods_Rafflex_AppStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280D3A1A1D1093B700FAB68C /* AdditionalViews */ = {
+			isa = PBXGroup;
+			children = (
+				280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */,
+				280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */,
+			);
+			path = AdditionalViews;
+			sourceTree = "<group>";
+		};
 		B63AE61C1CA95D5B006FF012 /* InitialViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B63AE61D1CA95D5B006FF012 /* RXInitialPageContentViewController.swift */,
-				B63AE61E1CA95D5B006FF012 /* RXInitialPageViewController.swift */,
 				B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */,
+				280D3A171D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift */,
 				B63AE6231CA96270006FF012 /* RXLoginSignUpViewController.swift */,
 			);
 			path = InitialViewControllers;
@@ -112,8 +135,8 @@
 				B64B79E21CA5993F00F4E771 /* PLists */,
 				B64B79E41CA5993F00F4E771 /* Resources */,
 				B64B79BD1CA5949500F4E771 /* Products */,
-				C634F39D6529A6BA4B16120F /* Pods */,
 				B8D7C5A9BE5C4CD6C3FA62E2 /* Frameworks */,
+				D217A20C4DE5DEA81F17B4B8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +152,7 @@
 		B64B79DF1CA5993F00F4E771 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				280D3A1A1D1093B700FAB68C /* AdditionalViews */,
 				B64B7A1A1CA5D1C700F4E771 /* ViewControllers */,
 				B64B79E01CA5993F00F4E771 /* AppDelegate.swift */,
 			);
@@ -140,6 +164,7 @@
 			children = (
 				B64B7A161CA5D06600F4E771 /* RXConstants.swift */,
 				B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */,
+				B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -191,15 +216,19 @@
 			isa = PBXGroup;
 			children = (
 				CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */,
+				FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */,
+				6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C634F39D6529A6BA4B16120F /* Pods */ = {
+		D217A20C4DE5DEA81F17B4B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */,
-				E2F2EF3E2AD91627EB7BE9E6 /* Pods.release.xcconfig */,
+				7B93D60F3B281AF3ED29E130 /* Pods-Rafflex-Alpha.debug.xcconfig */,
+				93E1DA66A132B98160BAB7E1 /* Pods-Rafflex-Alpha.release.xcconfig */,
+				1557BA225A72C9CAECAF0B3A /* Pods-Rafflex-AppStore.debug.xcconfig */,
+				4DC064B085CFEC17EC5FE644 /* Pods-Rafflex-AppStore.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -211,12 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B64B79CE1CA5949500F4E771 /* Build configuration list for PBXNativeTarget "Rafflex-Alpha" */;
 			buildPhases = (
-				270ED0278A0B2653E12DF649 /* Check Pods Manifest.lock */,
+				80BD136FA0B76AEC4E7437A5 /* [CP] Check Pods Manifest.lock */,
 				B64B79B81CA5949500F4E771 /* Sources */,
 				B64B79B91CA5949500F4E771 /* Frameworks */,
 				B64B79BA1CA5949500F4E771 /* Resources */,
-				05D6CF5DDB69C3A68A039427 /* Embed Pods Frameworks */,
-				E31A13F7832BFB6A812178AC /* Copy Pods Resources */,
+				A75166058F7009B9D3911EDE /* [CP] Embed Pods Frameworks */,
+				AC4C8D71C9DCB7D9CADCE717 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B64B79F61CA59B8100F4E771 /* Build configuration list for PBXNativeTarget "Rafflex-AppStore" */;
 			buildPhases = (
+				64BA88BE622136B250C29304 /* [CP] Check Pods Manifest.lock */,
 				B64B79EE1CA59B8100F4E771 /* Sources */,
 				B64B79F01CA59B8100F4E771 /* Frameworks */,
 				B64B79F11CA59B8100F4E771 /* Resources */,
+				DFB566B2A8933FE03287992D /* [CP] Embed Pods Frameworks */,
+				FF6286985B672E78EAA86E24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,6 +326,7 @@
 				B64B79EB1CA5993F00F4E771 /* LaunchScreen.storyboard in Resources */,
 				B64B7A281CA5DA6900F4E771 /* dineroFacilTutorial.jpg in Resources */,
 				B64B7A0E1CA5C97400F4E771 /* Localizable.strings in Resources */,
+				280D3A1F1D1093B700FAB68C /* RXWelcomeView.xib in Resources */,
 				B64B79EA1CA5993F00F4E771 /* Assets.xcassets in Resources */,
 				B64B79EC1CA5993F00F4E771 /* Main.storyboard in Resources */,
 			);
@@ -308,6 +341,7 @@
 				B64B79F21CA59B8100F4E771 /* LaunchScreen.storyboard in Resources */,
 				B64B7A291CA5DA6900F4E771 /* dineroFacilTutorial.jpg in Resources */,
 				B64B7A0F1CA5C97400F4E771 /* Localizable.strings in Resources */,
+				280D3A201D1093B700FAB68C /* RXWelcomeView.xib in Resources */,
 				B64B79F31CA59B8100F4E771 /* Assets.xcassets in Resources */,
 				B64B79F51CA59B8100F4E771 /* Main.storyboard in Resources */,
 			);
@@ -316,29 +350,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05D6CF5DDB69C3A68A039427 /* Embed Pods Frameworks */ = {
+		64BA88BE622136B250C29304 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		270ED0278A0B2653E12DF649 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,19 +365,79 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E31A13F7832BFB6A812178AC /* Copy Pods Resources */ = {
+		80BD136FA0B76AEC4E7437A5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A75166058F7009B9D3911EDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC4C8D71C9DCB7D9CADCE717 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFB566B2A8933FE03287992D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF6286985B672E78EAA86E24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -368,17 +447,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
 				281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */,
 				B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */,
 				281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
-				B63AE6201CA95D5B006FF012 /* RXInitialPageContentViewController.swift in Sources */,
 				281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
 				B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */,
+				280D3A181D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
+				280D3A1D1D1093B700FAB68C /* RXWelcomeView.swift in Sources */,
 				B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
-				B63AE6211CA95D5B006FF012 /* RXInitialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,13 +466,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60ACF061D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
 				281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
 				281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
 				281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
 				B64B79EF1CA59B8100F4E771 /* AppDelegate.swift in Sources */,
+				2811EEB71D08B68E00A59DDF /* RXInitialViewController.swift in Sources */,
+				280D3A191D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */,
+				280D3A1E1D1093B700FAB68C /* RXWelcomeView.swift in Sources */,
 				B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,13 +589,12 @@
 		};
 		B64B79CF1CA5949500F4E771 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FF8AF0761FC32A20A8B02EB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7B93D60F3B281AF3ED29E130 /* Pods-Rafflex-Alpha.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ramiro Ramirez Hernandez (9A8JDE7M9P)";
 				CURRENT_PROJECT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "PLists/Rafflex-Alpha.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -525,13 +608,12 @@
 		};
 		B64B79D01CA5949500F4E771 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2F2EF3E2AD91627EB7BE9E6 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 93E1DA66A132B98160BAB7E1 /* Pods-Rafflex-Alpha.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ramiro Ramirez Hernandez (WEUMM3X4MB)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ramiro Ramirez Hernandez (WEUMM3X4MB)";
 				CURRENT_PROJECT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "PLists/Rafflex-Alpha.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -545,12 +627,12 @@
 		};
 		B64B79F71CA59B8100F4E771 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1557BA225A72C9CAECAF0B3A /* Pods-Rafflex-AppStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "PLists/Rafflex-AppStore.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -564,12 +646,12 @@
 		};
 		B64B79F81CA59B8100F4E771 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DC064B085CFEC17EC5FE644 /* Pods-Rafflex-AppStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "PLists/Rafflex-AppStore.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
