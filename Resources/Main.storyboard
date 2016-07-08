@@ -37,6 +37,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rl-AL-exp">
                                 <rect key="frame" x="0.0" y="-40" width="600" height="640"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dxw-G5-wzz"/>
                                 </connections>
@@ -391,9 +392,55 @@
                     <view key="view" contentMode="scaleToFill" id="ATr-1C-PEb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tutorial1" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-Z3-1nq">
+                                <rect key="frame" x="250" y="430" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="kSA-YU-7kd"/>
+                                    <constraint firstAttribute="width" constant="100" id="phq-ya-cEf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8S6-wq-IyN">
+                                <rect key="frame" x="250" y="430" width="100" height="100"/>
+                                <connections>
+                                    <action selector="profileButtonPressed:" destination="VWB-TE-U79" eventType="touchUpInside" id="xCl-0u-3CF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gY-MT-VgJ">
+                                <rect key="frame" x="20" y="540" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.61568627450000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OHe-VT-gJ5"/>
+                                    <constraint firstAttribute="width" constant="40" id="Zz3-3f-Ulo"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="infoButtonPressed:" destination="VWB-TE-U79" eventType="touchUpInside" id="SaM-Vj-yMk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-Uy-LBw">
+                                <rect key="frame" x="540" y="540" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.61568627450000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="99Z-wY-FLK"/>
+                                    <constraint firstAttribute="height" constant="40" id="p6c-QY-fuu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="promotionButtonPressed:" destination="VWB-TE-U79" eventType="touchUpInside" id="D8h-SR-aP6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="6gY-MT-VgJ" secondAttribute="bottom" constant="20" id="3SB-Hw-FYq"/>
+                            <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="dYs-Z3-1nq" secondAttribute="bottom" constant="70" id="G4C-bA-mho"/>
+                            <constraint firstAttribute="trailing" secondItem="KCE-Uy-LBw" secondAttribute="trailing" constant="20" id="JvS-6C-TkZ"/>
+                            <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="KCE-Uy-LBw" secondAttribute="bottom" constant="20" id="Z8A-vM-cTY"/>
+                            <constraint firstItem="dYs-Z3-1nq" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="pJi-qk-MMl"/>
+                            <constraint firstItem="6gY-MT-VgJ" firstAttribute="leading" secondItem="ATr-1C-PEb" secondAttribute="leading" constant="20" id="wtN-if-fva"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="profileImageView" destination="dYs-Z3-1nq" id="mAR-9F-qiC"/>
                         <segue destination="y9S-UL-XBP" kind="presentation" identifier="toCreateRaffle" modalTransitionStyle="flipHorizontal" id="I6O-8C-TgO"/>
                         <segue destination="bxy-cU-eaE" kind="presentation" identifier="toAskForALoan" customClass="UIStoryboardSegueFromTop" customModule="Rafflex_Alpha" customModuleProvider="target" modalTransitionStyle="crossDissolve" id="jQr-1M-sEY"/>
                         <segue destination="YoY-AA-QyF" kind="presentation" identifier="toRafflesViewController" modalTransitionStyle="coverVertical" id="uuJ-wm-ggS"/>
@@ -644,6 +691,7 @@
     </scenes>
     <resources>
         <image name="SplashTitle" width="545" height="450"/>
+        <image name="Tutorial1" width="320" height="568"/>
         <image name="ic_close" width="34" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
