@@ -58,7 +58,6 @@ struct RXAPIManager {
         let fullPath = self.baseURLWithPath(requestData.path)
         Manager.sharedInstance.request(.POST, fullPath, parameters: requestData.parameters, headers: nil).responseString { (response) in
             if (response.result.isSuccess == true) {
-                print(response)
                 successBlock(result: response as? AnyObject)
             } else if (response.result.isFailure) {
                 failureBlock(result: response as? AnyObject, error: response.result.error)

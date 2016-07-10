@@ -248,7 +248,6 @@ class RXLoginSignUpViewController   : UITableViewController {
                 _password = self.loginRegisterParameters?[API.Parameter.Password.rawValue] {
                     let parameters = [API.Parameter.Email.rawValue: _email, API.Parameter.Password.rawValue: _password]
                     RXAPIManager.login(parameters, successBlock: { (result) in
-                            print(result)
                             self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
                         }, failureBlock: { (result, error) in
                             self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
