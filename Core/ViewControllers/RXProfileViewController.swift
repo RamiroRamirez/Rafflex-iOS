@@ -86,6 +86,8 @@ class RXProfileImageCell                : RXProfileCell {
         super.layoutSubviews()
         self.profileImageView?.layer.cornerRadius = 57.5
         self.profileImageView?.clipsToBounds = true
+        self.profileImageView?.layer.borderWidth = 2
+        self.profileImageView?.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     @IBAction func editPressed(sender: AnyObject) {
