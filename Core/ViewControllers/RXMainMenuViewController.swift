@@ -8,13 +8,17 @@
 
 import UIKit
 
-class RXMainMenuViewController: UIViewController {
-
+class RXMainMenuViewController              : UIViewController {
+    
+    @IBOutlet weak var profileImageView     : UIImageView?
+    
 	// MARK: - Life Cycle Methods
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.hideBackButton()
+        self.setBackroungImage()
+        self.profileImageSettings()
 		self.setGestureRecongnizers()
 	}
 
@@ -24,6 +28,21 @@ class RXMainMenuViewController: UIViewController {
 	}
 
 	// MARK: - Private/ Configurations Methods
+    
+    private func setBackroungImage() {
+        let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
+        backgroundImage.image = UIImage(named: "Splash")
+        self.view.addSubview(backgroundImage)
+        self.view.sendSubviewToBack(backgroundImage)
+    }
+    
+    private func profileImageSettings() {
+        self.profileImageView?.layer.borderWidth = 2
+        self.profileImageView?.layer.borderColor = UIColor.whiteColor().CGColor
+        self.profileImageView?.layer.cornerRadius = 50
+        self.profileImageView?.clipsToBounds = true
+        
+    }
 
 	private func hideBackButton() {
 		self.navigationItem.setHidesBackButton(true, animated: false)
@@ -59,6 +78,20 @@ class RXMainMenuViewController: UIViewController {
 	func askForALoan() {
 		self.performSegueWithIdentifier(SegueIds.ToLoansViewController, sender: nil)
 	}
+    
+    // MARK: - Actions
+    
+    @IBAction func profileButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier(SegueIds.ToProfileViewController, sender: nil)
+    }
+    
+    @IBAction func infoButtonPressed(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func promotionButtonPressed(sender: AnyObject) {
+        
+    }
 }
 
 class UIStoryboardSegueFromTop: UIStoryboardSegue {

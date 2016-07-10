@@ -8,9 +8,23 @@
 
 import UIKit
 
-enum UserDefault							: String {
+enum UserDefault                                : String {
     // Keys set in PList files
-    case APIBaseURL							= "ApiBaseURL"
+    case APIBaseURL                             = "ApiBaseURL"
+}
+
+struct API {
+    
+    enum Endpoint                               : String {
+        
+        case Login                              = "login.php"
+    }
+    
+    enum Parameter                              : String {
+        
+        case Email                              = "email"
+        case Password                           = "pwd"
+    }
 }
 
 struct StoryboardIds {
@@ -23,6 +37,7 @@ struct SegueIds {
 
     static let ToLoginViewController            = "toLoginViewController"
     static let ToSignUpViewController           = "toSignUpViewController"
+    static let ToProfileViewController          = "toProfileViewController"
 	static let ToMainMenuViewController			= "toMainMenu"
 	static let ToCreateRaffle					= "toCreateRaffle"
 	static let ToRaffleViewController			= "toRafflesViewController"
@@ -32,6 +47,8 @@ struct SegueIds {
 struct CellIdentifiers {
     
     static let LoginIconCell                    = "LoginIconCell"
+    static let ProfileImageCell                 = "ProfileImageCell"
+    static let ProfileInfoCell                  = "ProfileInfoCell"
     static let LoginInputCell                   = "LoginInputCell"
     static let LoginButtonCell                  = "LoginButtonCell"
     static let LoginFacebook                    = "LoginFacebookCell"
@@ -47,6 +64,8 @@ struct CellHeights {
     static let LoginButtonCell                  : CGFloat = 70
     static let FacebookCell                     : CGFloat = 54
     static let RaffleCell                       : CGFloat = 210
+    static let ProfileImageCell                 : CGFloat = 200
+    static let ProfileCell                      : CGFloat = 55
 }
 
 struct CornerRadius {

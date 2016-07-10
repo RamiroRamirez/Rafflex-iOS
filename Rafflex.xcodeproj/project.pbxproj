@@ -49,6 +49,9 @@
 		B64B7A2D1CA5DA6900F4E771 /* rifaTutorial.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B64B7A271CA5DA6900F4E771 /* rifaTutorial.jpg */; };
 		B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */; };
 		B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */; };
+		B65DA1A21D3288AF005BFC33 /* chicharito.png in Resources */ = {isa = PBXBuildFile; fileRef = B65DA1A11D3288AF005BFC33 /* chicharito.png */; };
+		B65DA1A41D32A51E005BFC33 /* RXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */; };
+		B65DA1A51D32A51E005BFC33 /* RXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,8 @@
 		B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXExtensions.swift; sourceTree = "<group>"; };
 		B64B7A311CA5F75200F4E771 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B64B7A321CA5F75E00F4E771 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B65DA1A11D3288AF005BFC33 /* chicharito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicharito.png; sourceTree = "<group>"; };
+		B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXProfileViewController.swift; sourceTree = "<group>"; };
 		CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_Alpha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -198,6 +203,7 @@
 				281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */,
 				281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */,
 				281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */,
+				B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				B64B7A251CA5DA6900F4E771 /* dineroFacilTutorial.jpg */,
+				B65DA1A11D3288AF005BFC33 /* chicharito.png */,
 				B64B7A261CA5DA6900F4E771 /* prestamoTutorial.jpg */,
 				B64B7A271CA5DA6900F4E771 /* rifaTutorial.jpg */,
 			);
@@ -321,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65DA1A21D3288AF005BFC33 /* chicharito.png in Resources */,
 				B64B7A2C1CA5DA6900F4E771 /* rifaTutorial.jpg in Resources */,
 				B64B7A2A1CA5DA6900F4E771 /* prestamoTutorial.jpg in Resources */,
 				B64B79EB1CA5993F00F4E771 /* LaunchScreen.storyboard in Resources */,
@@ -448,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
+				B65DA1A41D32A51E005BFC33 /* RXProfileViewController.swift in Sources */,
 				281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */,
 				B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
@@ -467,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B60ACF061D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
+				B65DA1A51D32A51E005BFC33 /* RXProfileViewController.swift in Sources */,
 				281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
 				281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,

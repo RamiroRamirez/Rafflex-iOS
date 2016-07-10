@@ -22,9 +22,9 @@ struct RXAPIManager {
         // path with endpoint for request.
         var path: String
         // dictionary of parameters for the request.
-        var parameters: [String: AnyObject]?
+        var parameters: [String: String]?
         
-        init(path: String, parameters: [String: AnyObject]? = nil) {
+        init(path: String, parameters: [String: String]? = nil) {
             self.path = path
             self.parameters = parameters
         }
@@ -38,4 +38,37 @@ struct RXAPIManager {
         }
         return baseURL
     }
+    
+    private static func GETRequest(requestData: RequestData, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        
+        let fullPath = self.baseURLWithPath(requestData.path)
+        Manager.sharedInstance.request(.GET, fullPath, parameters: requestData.parameters, headers: nil).responseJSON { (response) in
+            if let
+                value = response.result.value,
+                _value = value as? [String: AnyObject] where (response.result.isSuccess == true) {
+                    successBlock(result: _value)
+            } else {
+                failureBlock(result: response.result.value, error: response.result.error)
+            }
+        }
+    }
+    
+    private static func POSTRequest(requestData: RequestData, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        
+        let fullPath = self.baseURLWithPath(requestData.path)
+        Manager.sharedInstance.request(.POST, fullPath, parameters: requestData.parameters, headers: nil).responseString { (response) in
+            if (response.result.isSuccess == true) {
+                successBlock(result: response as? AnyObject)
+            } else if (response.result.isFailure) {
+                failureBlock(result: response as? AnyObject, error: response.result.error)
+            }
+        }
+    }
+    
+    static func login(parameters: [String: String]?, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        
+        let requestData = RequestData(path: API.Endpoint.Login.rawValue, parameters: parameters)
+        self.POSTRequest(requestData, successBlock: successBlock, failureBlock: failureBlock)
+    }
+
 }
