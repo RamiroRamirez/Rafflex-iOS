@@ -19,3 +19,8 @@
 "Login.Button.SignUp"                   = "Registrarse";
 "Login.Or"                              = "ó";
 "Login.Label.ForgotPassword"            = "¿Olvidaste tu contraseña?";
+
+"Profile.PersonalInformation"           = "Informacion personal";
+"Profile.CreatedRaffles"                = "Rifas creadas";
+"Profile.BoughtTickets"                 = "Boletos comprados";
+"Profile.PaymentMethods"                = "Formas de pago";

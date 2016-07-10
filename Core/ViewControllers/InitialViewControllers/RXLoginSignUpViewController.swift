@@ -99,6 +99,7 @@ class RXLoginSignUpCell                         	: UITableViewCell {
     var loginSignupType                         	: LoginSignUpType?
     var executeLoginBlock                       	: (() -> Void)?
     var dismissBlock                                : (() -> Void)?
+    var inputBlock                                  : ((parameterKey: String, value: String) -> Void)?
     
     func setCell() {
         // please override in subclasses
@@ -122,8 +123,6 @@ class RXLoginIconCell                           	: RXLoginSignUpCell {
     
     override func setCell() {
         super.setCell()
-        self.closeButton?.setImage(UIImage(named: "ic_close")?.imageWithRenderingMode(.AlwaysTemplate), forState: .Normal)
-        self.closeButton?.tintColor = UIColor.whiteColor()
     }
     
     // MARK: - Actions
@@ -140,12 +139,23 @@ class RXLoginInputCell                          	: RXLoginSignUpCell {
     
     override func setCell() {
         super.setCell()
+        self.inputTextField?.delegate = self
         if let _placeholder = self.type?.placeholder() {
             self.inputTextField?.attributedPlaceholder = NSAttributedString(string:_placeholder, attributes:[NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.4)])
         }
 		if let _imageName = self.type?.imageForInputCell() {
 			self.inputImageView?.image = UIImage(named: _imageName)
 		}
+    }
+}
+
+extension RXLoginInputCell                          : UITextFieldDelegate {
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        let parameterKey = ((self.type == .Email) ? API.Parameter.Email.rawValue : API.Parameter.Password.rawValue)
+        if let _textInTextField = textField.text {
+            self.inputBlock?(parameterKey: parameterKey, value: _textInTextField)
+        }
     }
 }
 
@@ -212,6 +222,7 @@ extension RXLoginFacebook: FBSDKLoginButtonDelegate {
 class RXLoginSignUpViewController   : UITableViewController {
 
     var loginSignUpType             : LoginSignUpType? = .Login
+    var loginRegisterParameters     : [String: String]? = [:]
     
     // MARK: - Life cycle
     
@@ -230,9 +241,25 @@ class RXLoginSignUpViewController   : UITableViewController {
     // MARK: - Private Methods
     
     private func loginSignupPressed() {
-		if (self.loginSignUpType == .Login) {
-        	self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
-		}
+        self.view.endEditing(true)
+		if (self.loginSignUpType == .Login),
+            let
+                _email = self.loginRegisterParameters?[API.Parameter.Email.rawValue],
+                _password = self.loginRegisterParameters?[API.Parameter.Password.rawValue] {
+                    let parameters = [API.Parameter.Email.rawValue: _email, API.Parameter.Password.rawValue: _password]
+                    RXAPIManager.login(parameters, successBlock: { (result) in
+                            print(result)
+                            self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
+                        }, failureBlock: { (result, error) in
+                            self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
+                    })
+        } else if (self.loginSignUpType == .SignUp) {
+            
+        }
+    }
+    
+    private func receivedParametersForLoginRegister(parameterKey: String, value: String) {
+        self.loginRegisterParameters?[parameterKey] = value
     }
 
 	private func setBackroungImage() {
@@ -269,6 +296,7 @@ extension RXLoginSignUpViewController {
         cell.loginSignupType = self.loginSignUpType
         cell.executeLoginBlock = self.loginSignupPressed
         cell.dismissBlock = self.dismissView
+        cell.inputBlock = self.receivedParametersForLoginRegister
         cell.setCell()
         return cell
     }
