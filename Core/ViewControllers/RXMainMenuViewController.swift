@@ -51,7 +51,7 @@ class RXMainMenuViewController              			: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		if (self.timerArrowAnimation == nil) {
-			self.showClover(-40, andDuration: 0.5)
+			self.showClover(-80, andDuration: 0.5)
 		}
 	}
 
@@ -194,9 +194,9 @@ extension RXMainMenuViewController {
 		UIView.animateWithDuration(andDuration, animations: {
 			self.view.layoutIfNeeded()
 			}, completion: { (animationDone: Bool) in
-				if (verticalCenterConstant == -40) {
-					self.showClover(-80, andDuration: 0.3)
-				} else if (verticalCenterConstant == -80) {
+				if (verticalCenterConstant == -80) {
+					self.showClover(-40, andDuration: 0.3)
+				} else if (verticalCenterConstant == -40) {
 					self.showClover(-60, andDuration: 0.3)
 				} else if (verticalCenterConstant == -60) {
 					self.rotateClover()
