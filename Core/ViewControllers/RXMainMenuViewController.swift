@@ -51,7 +51,9 @@ class RXMainMenuViewController              			: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		if (self.timerArrowAnimation == nil) {
-			self.showClover(-80, andDuration: 0.5)
+			self.showClover(AnimationConstants.FirstCloverMove, andDuration: AnimationConstants.StandarAnimationInterval)
+		} else {
+			self.changeSizeFromClover(size: AnimationConstants.LittleCloverWidthHeight)
 		}
 	}
 
@@ -194,11 +196,11 @@ extension RXMainMenuViewController {
 		UIView.animateWithDuration(andDuration, animations: {
 			self.view.layoutIfNeeded()
 			}, completion: { (animationDone: Bool) in
-				if (verticalCenterConstant == -80) {
-					self.showClover(-40, andDuration: 0.3)
-				} else if (verticalCenterConstant == -40) {
-					self.showClover(-60, andDuration: 0.3)
-				} else if (verticalCenterConstant == -60) {
+				if (verticalCenterConstant == AnimationConstants.FirstCloverMove) {
+					self.showClover(AnimationConstants.SecondCloverMove, andDuration: AnimationConstants.StandarAnimationInterval)
+				} else if (verticalCenterConstant == AnimationConstants.SecondCloverMove) {
+					self.showClover(AnimationConstants.FinalCloverMove, andDuration: AnimationConstants.StandarAnimationInterval)
+				} else if (verticalCenterConstant == AnimationConstants.FinalCloverMove) {
 					self.rotateClover()
 				}
 		})
@@ -206,10 +208,10 @@ extension RXMainMenuViewController {
 	}
 
 	private func rotateClover() {
-		UIView.animateWithDuration(1.5, animations: {
-			self.cloverImageView?.transform = CGAffineTransformMakeRotation((40.0 * CGFloat(M_PI)) / 180.0)
+		UIView.animateWithDuration(AnimationConstants.RotateAnimationInterval, animations: {
+			self.cloverImageView?.transform = CGAffineTransformMakeRotation((AnimationConstants.GradesToRotateClover * CGFloat(M_PI)) / 180.0)
 			}, completion: { (animationDone: Bool) in
-				self.changeSizeFromClover(size: 130)
+				self.changeSizeFromClover(size: AnimationConstants.LittleCloverWidthHeight)
 		})
 	}
 
@@ -218,23 +220,25 @@ extension RXMainMenuViewController {
 		self.cloverHeightConstraint?.constant = size
 		self.cloverWidthConstraint?.constant = size
 
-		UIView.animateWithDuration(0.4, animations: {
+		UIView.animateWithDuration(AnimationConstants.StandarAnimationInterval, animations: {
 			self.view.layoutIfNeeded()
 			}, completion: { (animationDone: Bool) in
 
-				if (size == 130) {
-					self.changeSizeFromClover(size: 150)
+				if (size == AnimationConstants.LittleCloverWidthHeight) {
+					self.changeSizeFromClover(size: AnimationConstants.NormalCloverWidthHeight)
 
 				} else {
 					self.makeElementsVisible()
-					self.timerArrowAnimation = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: #selector(self.changeArrowState), userInfo: nil, repeats: true)
+					if (self.timerArrowAnimation == nil) {
+						self.timerArrowAnimation = NSTimer.scheduledTimerWithTimeInterval(AnimationConstants.StandarAnimationInterval, target: self, selector: #selector(self.changeArrowState), userInfo: nil, repeats: true)
+					}
 				}
 		})
 	}
 
 	private func makeElementsVisible() {
 
-		UIView.animateWithDuration(0.3) {
+		UIView.animateWithDuration(AnimationConstants.StandarAnimationInterval) {
 			self.profileImageView?.alpha = 1.0
 			self.infoImageView?.alpha = 1.0
 			self.promoImageView?.alpha = 1.0
@@ -279,7 +283,7 @@ class UIStoryboardSegueFromTop: UIStoryboardSegue {
 		src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
 		dst.view.transform = CGAffineTransformMakeTranslation(0, -src.view.frame.size.height)
 
-		UIView.animateWithDuration(0.3, animations: {
+		UIView.animateWithDuration(AnimationConstants.StandarAnimationInterval, animations: {
 			dst.view.transform = CGAffineTransformMakeTranslation(0, 0)
 			}, completion: { (finished: Bool) in
 			src.presentViewController(dst, animated: false, completion: nil)

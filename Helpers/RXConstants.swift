@@ -68,6 +68,21 @@ struct CellHeights {
     static let ProfileCell                      : CGFloat = 55
 }
 
+struct AnimationConstants {
+
+	static let FirstCloverMove					: CGFloat = -80
+	static let SecondCloverMove					: CGFloat = -40
+	static let FinalCloverMove					: CGFloat = -60
+
+	static let GradesToRotateClover				: CGFloat = 40
+	static let NormalCloverWidthHeight			: CGFloat = 150
+	static let LittleCloverWidthHeight			: CGFloat = 130
+
+	static let StandarAnimationInterval			: NSTimeInterval = 0.3
+	static let RotateAnimationInterval			: NSTimeInterval = 1.5
+	
+}
+
 struct CornerRadius {
     
     static let StandardCornerRadius 			: CGFloat = 5.0
