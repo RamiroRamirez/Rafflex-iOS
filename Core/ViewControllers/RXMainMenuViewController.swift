@@ -8,14 +8,35 @@
 
 import UIKit
 
-class RXMainMenuViewController              : UIViewController {
+class RXMainMenuViewController              			: UIViewController {
     
-    @IBOutlet weak var profileImageView     : UIImageView?
+    @IBOutlet weak var profileImageView     			: UIImageView?
+	@IBOutlet weak var infoImageView					: UIImageView?
+	@IBOutlet weak var promoImageView					: UIImageView?
+	@IBOutlet weak var cloverImageView					: UIImageView?
+	@IBOutlet weak var cloverHeightConstraint			: NSLayoutConstraint?
+	@IBOutlet weak var cloverVerticalCenterConstraint	: NSLayoutConstraint?
+	@IBOutlet weak var cloverWidthConstraint			: NSLayoutConstraint?
+
+	@IBOutlet weak var arrowUpUpImageView				: RXArrowImageView?
+	@IBOutlet weak var arrowUpMiddleImageView			: RXArrowImageView?
+	@IBOutlet weak var arrowUpBottomImageView			: RXArrowImageView?
+	@IBOutlet weak var arrowRightLeftImageView			: RXArrowImageView?
+	@IBOutlet weak var arrowRightMiddleImageView		: RXArrowImageView?
+	@IBOutlet weak var arrowRightRightImageView			: RXArrowImageView?
+	@IBOutlet weak var arrowDownUpImageView				: RXArrowImageView?
+	@IBOutlet weak var arrowDownMiddleImageView			: RXArrowImageView?
+	@IBOutlet weak var arrowDownBottomImageView			: RXArrowImageView?
+
+	@IBOutlet var arrowsCollection						: [RXArrowImageView]?
+
+	var timerArrowAnimation								: NSTimer?
     
 	// MARK: - Life Cycle Methods
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.setArrowsState()
 		self.hideBackButton()
         self.setBackroungImage()
         self.profileImageSettings()
@@ -27,7 +48,29 @@ class RXMainMenuViewController              : UIViewController {
 		self.navigationController?.navigationBarHidden = false
 	}
 
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		if (self.timerArrowAnimation == nil) {
+			self.showClover(-40, andDuration: 0.5)
+		}
+	}
+
 	// MARK: - Private/ Configurations Methods
+
+	private func setArrowsState() {
+
+		self.arrowUpUpImageView?.state = .Full
+		self.arrowUpMiddleImageView?.state = .Middle
+		self.arrowUpBottomImageView?.state = .Light
+
+		self.arrowRightLeftImageView?.state = .Light
+		self.arrowRightMiddleImageView?.state = .Middle
+		self.arrowRightRightImageView?.state = .Full
+
+		self.arrowDownUpImageView?.state = .Light
+		self.arrowDownMiddleImageView?.state = .Middle
+		self.arrowDownBottomImageView?.state = .Full
+	}
     
     private func setBackroungImage() {
         let backgroundImage = UIImageView(frame: UIScreen.mainScreen().bounds)
@@ -92,6 +135,139 @@ class RXMainMenuViewController              : UIViewController {
     @IBAction func promotionButtonPressed(sender: AnyObject) {
         
     }
+}
+
+// MARK: - Animation
+
+extension RXMainMenuViewController {
+
+	enum AnimationState: Int {
+		case Light = 0
+		case Middle
+		case Full
+
+		static func allValues() -> [AnimationState] {
+			return [.Light, .Middle, .Full]
+		}
+
+		func imageForState(forDirection direction: AnimationDirection) -> UIImage? {
+			switch self {
+			case .Light: 	return direction.imageForLightState()
+			case .Middle: 	return direction.imageForLightState()
+			case .Full:		return direction.imageForFullState()
+			}
+		}
+
+		func nextState() -> AnimationState {
+			switch self {
+			case .Light:	return .Full
+			case .Middle:	return .Light
+			case .Full:		return .Middle
+			}
+		}
+	}
+
+	enum AnimationDirection {
+		case Up
+		case Right
+		case Down
+
+		func imageForLightState() -> UIImage? {
+			switch self {
+			case .Up:		return UIImage(named: "ic_arrowUpLight")
+			case .Right:	return UIImage(named: "ic_arrowRightLight")
+			case .Down:		return UIImage(named: "ic_arrowDownLight")
+			}
+		}
+
+		func imageForFullState() -> UIImage? {
+			switch self {
+			case .Up:		return UIImage(named: "ic_arrowUp")
+			case .Right:	return UIImage(named: "ic_arrowRight")
+			case .Down:		return UIImage(named: "ic_arrowDown")
+			}
+		}
+	}
+
+	private func showClover(verticalCenterConstant: CGFloat, andDuration: NSTimeInterval) {
+		self.cloverVerticalCenterConstraint?.constant = verticalCenterConstant
+		UIView.animateWithDuration(andDuration, animations: {
+			self.view.layoutIfNeeded()
+			}, completion: { (animationDone: Bool) in
+				if (verticalCenterConstant == -40) {
+					self.showClover(-80, andDuration: 0.3)
+				} else if (verticalCenterConstant == -80) {
+					self.showClover(-60, andDuration: 0.3)
+				} else if (verticalCenterConstant == -60) {
+					self.rotateClover()
+				}
+		})
+
+	}
+
+	private func rotateClover() {
+		UIView.animateWithDuration(1.5, animations: {
+			self.cloverImageView?.transform = CGAffineTransformMakeRotation((40.0 * CGFloat(M_PI)) / 180.0)
+			}, completion: { (animationDone: Bool) in
+				self.changeSizeFromClover(size: 130)
+		})
+	}
+
+	private func changeSizeFromClover(size size: CGFloat) {
+
+		self.cloverHeightConstraint?.constant = size
+		self.cloverWidthConstraint?.constant = size
+
+		UIView.animateWithDuration(0.4, animations: {
+			self.view.layoutIfNeeded()
+			}, completion: { (animationDone: Bool) in
+
+				if (size == 130) {
+					self.changeSizeFromClover(size: 150)
+
+				} else {
+					self.makeElementsVisible()
+					self.timerArrowAnimation = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: #selector(self.changeArrowState), userInfo: nil, repeats: true)
+				}
+		})
+	}
+
+	private func makeElementsVisible() {
+
+		UIView.animateWithDuration(0.3) {
+			self.profileImageView?.alpha = 1.0
+			self.infoImageView?.alpha = 1.0
+			self.promoImageView?.alpha = 1.0
+
+			for arrow in self.arrowsCollection ?? [] {
+				arrow.alpha = 1.0
+			}
+		}
+	}
+
+	func changeArrowState() {
+		self.arrowUpUpImageView?.state = (self.arrowUpUpImageView?.state)?.nextState()
+		self.arrowUpMiddleImageView?.state = (self.arrowUpMiddleImageView?.state)?.nextState()
+		self.arrowUpBottomImageView?.state = (self.arrowUpBottomImageView?.state)?.nextState()
+		self.arrowRightLeftImageView?.state = (self.arrowRightLeftImageView?.state)?.nextState()
+		self.arrowRightMiddleImageView?.state = (self.arrowRightMiddleImageView?.state)?.nextState()
+		self.arrowRightRightImageView?.state = (self.arrowRightRightImageView?.state)?.nextState()
+		self.arrowDownUpImageView?.state = (self.arrowDownUpImageView?.state)?.nextState()
+		self.arrowDownMiddleImageView?.state = (self.arrowDownMiddleImageView?.state)?.nextState()
+		self.arrowDownBottomImageView?.state = (self.arrowDownBottomImageView?.state)?.nextState()
+
+		self.arrowUpUpImageView?.image = self.arrowUpUpImageView?.state?.imageForState(forDirection: .Up)
+		self.arrowUpMiddleImageView?.image = self.arrowUpMiddleImageView?.state?.imageForState(forDirection: .Up)
+		self.arrowUpBottomImageView?.image = self.arrowUpBottomImageView?.state?.imageForState(forDirection: .Up)
+
+		self.arrowRightLeftImageView?.image = self.arrowRightLeftImageView?.state?.imageForState(forDirection: .Right)
+		self.arrowRightMiddleImageView?.image = self.arrowRightMiddleImageView?.state?.imageForState(forDirection: .Right)
+		self.arrowRightRightImageView?.image = self.arrowRightRightImageView?.state?.imageForState(forDirection: .Right)
+
+		self.arrowDownUpImageView?.image = self.arrowDownUpImageView?.state?.imageForState(forDirection: .Down)
+		self.arrowDownMiddleImageView?.image = self.arrowDownMiddleImageView?.state?.imageForState(forDirection: .Down)
+		self.arrowDownBottomImageView?.image = self.arrowDownBottomImageView?.state?.imageForState(forDirection: .Down)
+	}
 }
 
 class UIStoryboardSegueFromTop: UIStoryboardSegue {

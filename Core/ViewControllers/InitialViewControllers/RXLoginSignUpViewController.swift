@@ -246,10 +246,13 @@ class RXLoginSignUpViewController   : UITableViewController {
             let
                 _email = self.loginRegisterParameters?[API.Parameter.Email.rawValue],
                 _password = self.loginRegisterParameters?[API.Parameter.Password.rawValue] {
+					MBProgressHUD.showHUDAddedTo(self.view, animated: true)
                     let parameters = [API.Parameter.Email.rawValue: _email, API.Parameter.Password.rawValue: _password]
                     RXAPIManager.login(parameters, successBlock: { (result) in
+							MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                             self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
                         }, failureBlock: { (result, error) in
+							MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                             self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
                     })
         } else if (self.loginSignUpType == .SignUp) {

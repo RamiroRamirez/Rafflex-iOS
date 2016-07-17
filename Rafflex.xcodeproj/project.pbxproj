@@ -22,6 +22,8 @@
 		281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
 		281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
 		281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
+		28756F2B1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */; };
+		28756F2C1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */; };
 		6E5317DFCEE23EFAE0AD91C7 /* Pods_Rafflex_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */; };
 		8BF576EE7D001EF001EE4573 /* Pods_Rafflex_Alpha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */; };
 		B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */; };
@@ -63,6 +65,7 @@
 		281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXCreateRaffleViewController.swift; sourceTree = "<group>"; };
 		281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXRafflesViewController.swift; sourceTree = "<group>"; };
 		281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoansViewController.swift; sourceTree = "<group>"; };
+		28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXArrowImageView.swift; sourceTree = "<group>"; };
 		4DC064B085CFEC17EC5FE644 /* Pods-Rafflex-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B93D60F3B281AF3ED29E130 /* Pods-Rafflex-Alpha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-Alpha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			children = (
 				280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */,
 				280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */,
+				28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */,
 			);
 			path = AdditionalViews;
 			sourceTree = "<group>";
@@ -463,6 +467,7 @@
 				B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */,
 				281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
 				281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
+				28756F2B1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */,
 				B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */,
 				280D3A181D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
@@ -483,6 +488,7 @@
 				281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
 				281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
 				B64B79EF1CA59B8100F4E771 /* AppDelegate.swift in Sources */,
+				28756F2C1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */,
 				2811EEB71D08B68E00A59DDF /* RXInitialViewController.swift in Sources */,
 				280D3A191D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OMY-20-dwa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="OMY-20-dwa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -118,7 +118,7 @@
                         <outlet property="pageControl" destination="CVN-2r-Eth" id="Lvp-lE-g9m"/>
                         <outlet property="signUpButton" destination="dMG-Hh-ydN" id="W6a-W0-QPR"/>
                         <outlet property="welcomeScrollView" destination="2rl-AL-exp" id="Fjs-5e-2lx"/>
-                        <segue destination="Gu2-ld-YU0" kind="modal" identifier="toLoginViewController" id="FKq-1o-seD"/>
+                        <segue destination="Gu2-ld-YU0" kind="presentation" identifier="toLoginViewController" id="FKq-1o-seD"/>
                         <segue destination="Gu2-ld-YU0" kind="presentation" identifier="toSignUpViewController" id="bXY-EE-O0k"/>
                     </connections>
                 </viewController>
@@ -400,7 +400,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicharito.png" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-Z3-1nq">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicharito.png" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-Z3-1nq">
                                 <rect key="frame" x="250" y="430" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="kSA-YU-7kd"/>
@@ -413,7 +413,7 @@
                                     <action selector="profileButtonPressed:" destination="VWB-TE-U79" eventType="touchUpInside" id="xCl-0u-3CF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_promo" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-Xp-oJq">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_promo" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-Xp-oJq">
                                 <rect key="frame" x="540" y="540" width="40" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCE-Uy-LBw">
@@ -427,13 +427,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_trebolMenu" translatesAutoresizingMaskIntoConstraints="NO" id="yfs-iv-lzJ">
-                                <rect key="frame" x="180" y="120" width="240" height="240"/>
+                                <rect key="frame" x="125" y="825" width="350" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="L2v-HY-u0q"/>
-                                    <constraint firstAttribute="height" constant="240" id="afc-K7-cJB"/>
+                                    <constraint firstAttribute="width" constant="350" id="L2v-HY-u0q"/>
+                                    <constraint firstAttribute="height" constant="350" id="afc-K7-cJB"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_info" translatesAutoresizingMaskIntoConstraints="NO" id="yTb-ZM-F8S">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_info" translatesAutoresizingMaskIntoConstraints="NO" id="yTb-ZM-F8S">
                                 <rect key="frame" x="20" y="540" width="40" height="40"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gY-MT-VgJ">
@@ -453,35 +453,136 @@
                                     <constraint firstAttribute="height" constant="35" id="x5n-OI-xcV"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowUp" translatesAutoresizingMaskIntoConstraints="NO" id="1wh-6M-qRI" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="734" width="50" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowUpMiddle" translatesAutoresizingMaskIntoConstraints="NO" id="Dmn-yL-aYz" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="756" width="50" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowUpLight" translatesAutoresizingMaskIntoConstraints="NO" id="tta-Y8-9wO" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="778" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="6bv-e3-PDg"/>
+                                    <constraint firstAttribute="width" constant="50" id="Z15-tL-4Z4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowRightLight" translatesAutoresizingMaskIntoConstraints="NO" id="56q-uJ-8OA" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="495" y="975" width="27" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HMk-Mz-zJa"/>
+                                    <constraint firstAttribute="width" constant="27" id="r8j-Ml-jUq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowRightLight" translatesAutoresizingMaskIntoConstraints="NO" id="oWt-Me-772" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="517" y="975" width="27" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3pI-rz-n3R"/>
+                                    <constraint firstAttribute="width" constant="27" id="Huq-u3-3pa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowRight" translatesAutoresizingMaskIntoConstraints="NO" id="s5Y-zJ-GO5" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="539" y="975" width="27" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0Mi-Nd-Xta"/>
+                                    <constraint firstAttribute="width" constant="27" id="ZLf-a2-hgE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowDownLight" translatesAutoresizingMaskIntoConstraints="NO" id="oAz-RJ-uT8" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="1195" width="50" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowDownLight" translatesAutoresizingMaskIntoConstraints="NO" id="xQ2-Lu-rec" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="1217" width="50" height="27"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="pMB-BD-qXB" customClass="RXArrowImageView" customModule="Rafflex_Alpha" customModuleProvider="target">
+                                <rect key="frame" x="275" y="1239" width="50" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="neY-1W-qwk"/>
+                                    <constraint firstAttribute="width" constant="50" id="pJw-u2-pSI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Byk-Xp-oJq" firstAttribute="height" secondItem="KCE-Uy-LBw" secondAttribute="height" id="1m5-2A-KeB"/>
                             <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="6gY-MT-VgJ" secondAttribute="bottom" constant="20" id="3SB-Hw-FYq"/>
+                            <constraint firstItem="yfs-iv-lzJ" firstAttribute="top" secondItem="tta-Y8-9wO" secondAttribute="bottom" constant="20" id="4RE-o3-rYa"/>
+                            <constraint firstItem="pMB-BD-qXB" firstAttribute="centerX" secondItem="yfs-iv-lzJ" secondAttribute="centerX" id="5Eo-Ss-jFJ"/>
                             <constraint firstItem="LaY-G4-AXA" firstAttribute="top" secondItem="Pwc-1k-C7R" secondAttribute="bottom" constant="10" id="63Y-Ra-wmE"/>
                             <constraint firstItem="yTb-ZM-F8S" firstAttribute="height" secondItem="6gY-MT-VgJ" secondAttribute="height" id="7aW-as-lQu"/>
+                            <constraint firstItem="pMB-BD-qXB" firstAttribute="height" secondItem="oAz-RJ-uT8" secondAttribute="height" id="8ta-kR-0Km"/>
+                            <constraint firstItem="tta-Y8-9wO" firstAttribute="height" secondItem="1wh-6M-qRI" secondAttribute="height" id="AJq-yO-ysx"/>
+                            <constraint firstItem="tta-Y8-9wO" firstAttribute="top" secondItem="Dmn-yL-aYz" secondAttribute="bottom" constant="-5" id="Aqd-jH-1oi"/>
+                            <constraint firstItem="56q-uJ-8OA" firstAttribute="leading" secondItem="yfs-iv-lzJ" secondAttribute="trailing" constant="20" id="BHX-OS-a8S"/>
+                            <constraint firstItem="xQ2-Lu-rec" firstAttribute="height" secondItem="oAz-RJ-uT8" secondAttribute="height" id="Bii-AX-SEn"/>
+                            <constraint firstItem="1wh-6M-qRI" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="Bqi-Ch-uhE"/>
                             <constraint firstItem="yTb-ZM-F8S" firstAttribute="centerX" secondItem="6gY-MT-VgJ" secondAttribute="centerX" id="Ebd-3F-q2h"/>
                             <constraint firstItem="yTb-ZM-F8S" firstAttribute="centerY" secondItem="6gY-MT-VgJ" secondAttribute="centerY" id="FOF-17-aa8"/>
+                            <constraint firstItem="pMB-BD-qXB" firstAttribute="top" secondItem="xQ2-Lu-rec" secondAttribute="bottom" constant="-5" id="Fg1-gS-jBq"/>
                             <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="dYs-Z3-1nq" secondAttribute="bottom" constant="70" id="G4C-bA-mho"/>
                             <constraint firstItem="LaY-G4-AXA" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="GOx-jL-gfd"/>
                             <constraint firstItem="8S6-wq-IyN" firstAttribute="width" secondItem="dYs-Z3-1nq" secondAttribute="width" id="GZ5-ha-qC4"/>
+                            <constraint firstItem="tta-Y8-9wO" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="HiB-H0-Gi7"/>
+                            <constraint firstItem="s5Y-zJ-GO5" firstAttribute="leading" secondItem="oWt-Me-772" secondAttribute="trailing" constant="-5" id="Isb-Oi-cfs"/>
+                            <constraint firstItem="tta-Y8-9wO" firstAttribute="width" secondItem="1wh-6M-qRI" secondAttribute="width" id="JTZ-6r-vRT"/>
                             <constraint firstItem="Byk-Xp-oJq" firstAttribute="centerY" secondItem="KCE-Uy-LBw" secondAttribute="centerY" id="JU9-uO-Z2F"/>
                             <constraint firstAttribute="trailing" secondItem="KCE-Uy-LBw" secondAttribute="trailing" constant="20" id="JvS-6C-TkZ"/>
-                            <constraint firstItem="yfs-iv-lzJ" firstAttribute="centerY" secondItem="ATr-1C-PEb" secondAttribute="centerY" constant="-60" id="KDT-he-EZq"/>
+                            <constraint firstItem="oAz-RJ-uT8" firstAttribute="centerX" secondItem="yfs-iv-lzJ" secondAttribute="centerX" id="Jzs-IN-rLk"/>
+                            <constraint firstItem="yfs-iv-lzJ" firstAttribute="centerY" secondItem="ATr-1C-PEb" secondAttribute="centerY" constant="700" id="KDT-he-EZq"/>
+                            <constraint firstItem="s5Y-zJ-GO5" firstAttribute="height" secondItem="56q-uJ-8OA" secondAttribute="height" id="LxC-m5-ee5"/>
+                            <constraint firstItem="s5Y-zJ-GO5" firstAttribute="centerY" secondItem="56q-uJ-8OA" secondAttribute="centerY" id="MYt-tG-4GF"/>
                             <constraint firstItem="Byk-Xp-oJq" firstAttribute="width" secondItem="KCE-Uy-LBw" secondAttribute="width" id="NCP-L5-TLg"/>
+                            <constraint firstItem="xQ2-Lu-rec" firstAttribute="width" secondItem="oAz-RJ-uT8" secondAttribute="width" id="OpQ-Yq-Lej"/>
+                            <constraint firstItem="xQ2-Lu-rec" firstAttribute="centerX" secondItem="yfs-iv-lzJ" secondAttribute="centerX" id="STF-bH-gPF"/>
+                            <constraint firstItem="56q-uJ-8OA" firstAttribute="centerY" secondItem="yfs-iv-lzJ" secondAttribute="centerY" id="Tir-tC-8hk"/>
+                            <constraint firstItem="oWt-Me-772" firstAttribute="centerY" secondItem="56q-uJ-8OA" secondAttribute="centerY" id="TnC-HE-Box"/>
+                            <constraint firstItem="oAz-RJ-uT8" firstAttribute="top" secondItem="yfs-iv-lzJ" secondAttribute="bottom" constant="20" id="Vjd-6R-W1P"/>
                             <constraint firstItem="8S6-wq-IyN" firstAttribute="centerX" secondItem="dYs-Z3-1nq" secondAttribute="centerX" id="WfJ-LW-AE2"/>
                             <constraint firstItem="yTb-ZM-F8S" firstAttribute="width" secondItem="6gY-MT-VgJ" secondAttribute="width" id="YOp-Dq-svY"/>
                             <constraint firstItem="Z8r-ze-aB2" firstAttribute="top" secondItem="KCE-Uy-LBw" secondAttribute="bottom" constant="20" id="Z8A-vM-cTY"/>
                             <constraint firstItem="yfs-iv-lzJ" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="a8Q-K6-iTZ"/>
+                            <constraint firstItem="Dmn-yL-aYz" firstAttribute="width" secondItem="1wh-6M-qRI" secondAttribute="width" id="aDC-ox-Bwh"/>
                             <constraint firstItem="8S6-wq-IyN" firstAttribute="centerY" secondItem="dYs-Z3-1nq" secondAttribute="centerY" id="ab1-JH-u4I"/>
+                            <constraint firstItem="xQ2-Lu-rec" firstAttribute="top" secondItem="oAz-RJ-uT8" secondAttribute="bottom" constant="-5" id="ePc-yD-Zw7"/>
+                            <constraint firstItem="oWt-Me-772" firstAttribute="leading" secondItem="56q-uJ-8OA" secondAttribute="trailing" constant="-5" id="jQW-ej-d0o"/>
+                            <constraint firstItem="oWt-Me-772" firstAttribute="height" secondItem="56q-uJ-8OA" secondAttribute="height" id="lEg-JC-zZp"/>
+                            <constraint firstItem="pMB-BD-qXB" firstAttribute="width" secondItem="oAz-RJ-uT8" secondAttribute="width" id="ltH-v0-jCd"/>
+                            <constraint firstItem="Dmn-yL-aYz" firstAttribute="top" secondItem="1wh-6M-qRI" secondAttribute="bottom" constant="-5" id="oeH-QV-atu"/>
                             <constraint firstItem="dYs-Z3-1nq" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="pJi-qk-MMl"/>
                             <constraint firstItem="Byk-Xp-oJq" firstAttribute="centerX" secondItem="KCE-Uy-LBw" secondAttribute="centerX" id="qN8-oU-7bd"/>
+                            <constraint firstItem="s5Y-zJ-GO5" firstAttribute="width" secondItem="56q-uJ-8OA" secondAttribute="width" id="s2g-7a-69b"/>
+                            <constraint firstItem="oWt-Me-772" firstAttribute="width" secondItem="56q-uJ-8OA" secondAttribute="width" id="u3d-Yq-tat"/>
                             <constraint firstItem="8S6-wq-IyN" firstAttribute="height" secondItem="dYs-Z3-1nq" secondAttribute="height" id="w8U-7e-Ood"/>
                             <constraint firstItem="6gY-MT-VgJ" firstAttribute="leading" secondItem="ATr-1C-PEb" secondAttribute="leading" constant="20" id="wtN-if-fva"/>
+                            <constraint firstItem="Dmn-yL-aYz" firstAttribute="height" secondItem="1wh-6M-qRI" secondAttribute="height" id="wy9-5X-xsM"/>
+                            <constraint firstItem="Dmn-yL-aYz" firstAttribute="centerX" secondItem="ATr-1C-PEb" secondAttribute="centerX" id="xsf-9D-F5w"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arrowDownBottomImageView" destination="pMB-BD-qXB" id="1KV-jN-f93"/>
+                        <outlet property="arrowDownMiddleImageView" destination="xQ2-Lu-rec" id="is8-iB-H3b"/>
+                        <outlet property="arrowDownUpImageView" destination="oAz-RJ-uT8" id="UIg-Py-wh5"/>
+                        <outlet property="arrowRightLeftImageView" destination="56q-uJ-8OA" id="tYq-NG-oZm"/>
+                        <outlet property="arrowRightMiddleImageView" destination="oWt-Me-772" id="fQa-Or-f2r"/>
+                        <outlet property="arrowRightRightImageView" destination="s5Y-zJ-GO5" id="DzW-RF-uhc"/>
+                        <outlet property="arrowUpBottomImageView" destination="tta-Y8-9wO" id="Ywc-dX-Xat"/>
+                        <outlet property="arrowUpMiddleImageView" destination="Dmn-yL-aYz" id="o52-pX-anC"/>
+                        <outlet property="arrowUpUpImageView" destination="1wh-6M-qRI" id="8Uv-vI-gjW"/>
+                        <outlet property="cloverHeightConstraint" destination="afc-K7-cJB" id="vgl-Kg-WZ0"/>
+                        <outlet property="cloverImageView" destination="yfs-iv-lzJ" id="7fT-IK-QDo"/>
+                        <outlet property="cloverVerticalCenterConstraint" destination="KDT-he-EZq" id="B8V-Kl-wHl"/>
+                        <outlet property="cloverWidthConstraint" destination="L2v-HY-u0q" id="TTf-Wv-IFT"/>
+                        <outlet property="infoImageView" destination="yTb-ZM-F8S" id="h6d-4U-lSL"/>
                         <outlet property="profileImageView" destination="dYs-Z3-1nq" id="mAR-9F-qiC"/>
+                        <outlet property="promoImageView" destination="Byk-Xp-oJq" id="XdV-2X-qrP"/>
+                        <outletCollection property="arrowsCollection" destination="1wh-6M-qRI" collectionClass="NSMutableArray" id="0hD-41-4JL"/>
+                        <outletCollection property="arrowsCollection" destination="Dmn-yL-aYz" collectionClass="NSMutableArray" id="f81-Jk-doF"/>
+                        <outletCollection property="arrowsCollection" destination="tta-Y8-9wO" collectionClass="NSMutableArray" id="OCg-3D-GBM"/>
+                        <outletCollection property="arrowsCollection" destination="56q-uJ-8OA" collectionClass="NSMutableArray" id="4Ps-Xb-8gH"/>
+                        <outletCollection property="arrowsCollection" destination="oWt-Me-772" collectionClass="NSMutableArray" id="sdL-Pg-P7O"/>
+                        <outletCollection property="arrowsCollection" destination="s5Y-zJ-GO5" collectionClass="NSMutableArray" id="xsO-Sh-t1U"/>
+                        <outletCollection property="arrowsCollection" destination="oAz-RJ-uT8" collectionClass="NSMutableArray" id="W8l-ft-rra"/>
+                        <outletCollection property="arrowsCollection" destination="xQ2-Lu-rec" collectionClass="NSMutableArray" id="Cyl-Ul-5D8"/>
+                        <outletCollection property="arrowsCollection" destination="pMB-BD-qXB" collectionClass="NSMutableArray" id="ksQ-fl-qGx"/>
                         <segue destination="y9S-UL-XBP" kind="presentation" identifier="toCreateRaffle" modalTransitionStyle="flipHorizontal" id="I6O-8C-TgO"/>
                         <segue destination="bxy-cU-eaE" kind="presentation" identifier="toAskForALoan" customClass="UIStoryboardSegueFromTop" customModule="Rafflex_Alpha" customModuleProvider="target" modalTransitionStyle="crossDissolve" id="jQr-1M-sEY"/>
                         <segue destination="YoY-AA-QyF" kind="presentation" identifier="toRafflesViewController" modalTransitionStyle="coverVertical" id="uuJ-wm-ggS"/>
@@ -496,7 +597,7 @@
         <scene sceneID="Xen-Gg-mRq">
             <objects>
                 <navigationController id="nbO-V6-RBt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" shadowImage="ic_rafflex" backIndicatorImage="ic_rafflex" id="dbv-49-VdU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbv-49-VdU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.22352941176470587" green="0.18431372549019609" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
@@ -603,7 +704,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="k7i-Q7-vP7">
-                        <barButtonItem key="leftBarButtonItem" image="ic_close" style="plain" id="utn-JD-u0Z">
+                        <barButtonItem key="leftBarButtonItem" image="ic_close" id="utn-JD-u0Z">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="dismissButtonPressed:" destination="MxP-Qb-pPy" id="K0b-mG-149"/>
@@ -857,13 +958,20 @@
     <resources>
         <image name="SplashTitle" width="545" height="450"/>
         <image name="chicharito.png" width="180" height="180"/>
+        <image name="ic_arrowDown" width="63" height="35"/>
+        <image name="ic_arrowDownLight" width="63" height="35"/>
+        <image name="ic_arrowRight" width="35" height="63"/>
+        <image name="ic_arrowRightLight" width="35" height="63"/>
+        <image name="ic_arrowUp" width="63" height="35"/>
+        <image name="ic_arrowUpLight" width="63" height="35"/>
+        <image name="ic_arrowUpMiddle" width="63" height="35"/>
         <image name="ic_close" width="20" height="19"/>
         <image name="ic_info" width="94" height="94"/>
         <image name="ic_promo" width="94" height="94"/>
         <image name="ic_rafflex" width="170" height="45"/>
-        <image name="ic_trebolMenu" width="299" height="298"/>
+        <image name="ic_trebolMenu" width="233" height="233"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bXY-EE-O0k"/>
+        <segue reference="FKq-1o-seD"/>
     </inferredMetricsTieBreakers>
 </document>
