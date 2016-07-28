@@ -972,10 +972,10 @@
             </objects>
             <point key="canvasLocation" x="1053" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Promos View Controller-->
         <scene sceneID="01I-lO-bOp">
             <objects>
-                <viewController id="M6v-cv-82P" sceneMemberID="viewController">
+                <viewController id="M6v-cv-82P" customClass="RXPromosViewController" customModule="Rafflex_Alpha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bo1-K8-h1R"/>
                         <viewControllerLayoutGuide type="bottom" id="bHf-9r-8Rm"/>
@@ -987,6 +987,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LUD-Hd-Wv1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="M6v-cv-82P" id="bak-37-97n"/>
+                                    <outlet property="delegate" destination="M6v-cv-82P" id="IT8-xe-ZXC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -997,16 +1001,26 @@
                             <constraint firstItem="LUD-Hd-Wv1" firstAttribute="leading" secondItem="GV9-aB-CLo" secondAttribute="leading" id="wi1-Qn-35o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="M1I-Pu-vuV"/>
+                    <navigationItem key="navigationItem" id="M1I-Pu-vuV">
+                        <barButtonItem key="leftBarButtonItem" image="ic_close" id="Xrk-SA-Cfd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="dismissViewController:" destination="M6v-cv-82P" id="EQV-Uj-1tJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="LUD-Hd-Wv1" id="fEz-MH-GQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKD-tk-93z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="1124"/>
         </scene>
-        <!--View Controller-->
+        <!--Help Infos View Controller-->
         <scene sceneID="jwf-nt-wSh">
             <objects>
-                <viewController id="Pt7-vI-KpE" sceneMemberID="viewController">
+                <viewController id="Pt7-vI-KpE" customClass="RXHelpInfosViewController" customModule="Rafflex_Alpha" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JTC-7K-U51"/>
                         <viewControllerLayoutGuide type="bottom" id="jQI-fn-OD3"/>
@@ -1018,6 +1032,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-TC-gbY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Pt7-vI-KpE" id="P1b-f7-8Qt"/>
+                                    <outlet property="delegate" destination="Pt7-vI-KpE" id="r0d-Ve-lf1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1028,7 +1046,17 @@
                             <constraint firstAttribute="trailing" secondItem="gI2-TC-gbY" secondAttribute="trailing" id="pFb-gi-YKF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="thb-Lh-Qj0"/>
+                    <navigationItem key="navigationItem" id="thb-Lh-Qj0">
+                        <barButtonItem key="leftBarButtonItem" image="ic_close" id="hTN-d5-qPe">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="dismissViewController:" destination="Pt7-vI-KpE" id="w7r-1r-Ayc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gI2-TC-gbY" id="QrH-ov-9aC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfc-0w-l89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
