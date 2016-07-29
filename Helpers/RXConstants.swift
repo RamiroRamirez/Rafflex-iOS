@@ -42,6 +42,7 @@ struct SegueIds {
 	static let ToCreateRaffle					= "toCreateRaffle"
 	static let ToRaffleViewController			= "toRafflesViewController"
 	static let ToLoansViewController			= "toAskForALoan"
+	static let ToPersonalDataViewController		= "toPersonalDataTableView"
 }
 
 struct CellIdentifiers {

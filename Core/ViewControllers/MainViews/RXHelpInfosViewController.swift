@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Temporal 
+
 class RXHelpInfosViewController		: UIViewController {
 
 	@IBOutlet weak var tableView	: UITableView?

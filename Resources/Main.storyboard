@@ -626,7 +626,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IhN-Ns-IZc" id="6eu-60-wiG">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chicharito.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ffy-xn-tPi">
@@ -667,7 +667,7 @@
                                 <rect key="frame" x="0.0" y="292" width="600" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="idT-Wl-yR9" id="mp2-16-6io">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="54"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="My6-a5-d12">
@@ -711,10 +711,114 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="fdH-OE-vpc" kind="show" id="hpn-r7-inG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dto-gO-unM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="1894"/>
+        </scene>
+        <!--Personal Information Container View Controller-->
+        <scene sceneID="Fep-dm-Rbi">
+            <objects>
+                <viewController id="fdH-OE-vpc" customClass="RXPersonalInformationContainerViewController" customModule="Rafflex_Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5sb-KE-v6F"/>
+                        <viewControllerLayoutGuide type="bottom" id="aog-i5-1xL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8GC-HW-gHl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-Lh-wtt">
+                                <rect key="frame" x="300" y="64" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="K24-8c-8cz"/>
+                                </constraints>
+                                <state key="normal" title="Dirección">
+                                    <color key="titleColor" red="0.22352941179999999" green="0.1843137255" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addressDataSelected:" destination="fdH-OE-vpc" eventType="touchUpInside" id="B6n-oa-2MU"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUh-Ox-idS">
+                                <rect key="frame" x="0.0" y="114" width="600" height="486"/>
+                                <connections>
+                                    <segue destination="IBh-jN-bIt" kind="embed" identifier="toPersonalDataTableView" id="wcv-zq-uxp"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LR-Sk-705">
+                                <rect key="frame" x="0.0" y="64" width="300" height="50"/>
+                                <state key="normal" title="Datos">
+                                    <color key="titleColor" red="0.95294117649999999" green="0.61568627450000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="personalDataSelected:" destination="fdH-OE-vpc" eventType="touchUpInside" id="R9C-Ku-7iS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bf8-Lh-wtt" firstAttribute="width" secondItem="6LR-Sk-705" secondAttribute="width" id="3Di-Hy-Dhc"/>
+                            <constraint firstItem="TUh-Ox-idS" firstAttribute="leading" secondItem="8GC-HW-gHl" secondAttribute="leading" id="3sk-nA-otM"/>
+                            <constraint firstItem="Bf8-Lh-wtt" firstAttribute="width" secondItem="8GC-HW-gHl" secondAttribute="width" multiplier="1/2" id="CcM-Bt-aUe"/>
+                            <constraint firstItem="Bf8-Lh-wtt" firstAttribute="top" secondItem="5sb-KE-v6F" secondAttribute="bottom" id="Ci6-Zc-wqw"/>
+                            <constraint firstAttribute="trailing" secondItem="TUh-Ox-idS" secondAttribute="trailing" id="bAw-zh-guj"/>
+                            <constraint firstItem="TUh-Ox-idS" firstAttribute="top" secondItem="Bf8-Lh-wtt" secondAttribute="bottom" id="dOi-7I-81Y"/>
+                            <constraint firstItem="6LR-Sk-705" firstAttribute="top" secondItem="5sb-KE-v6F" secondAttribute="bottom" id="hLY-Xx-85c"/>
+                            <constraint firstAttribute="trailing" secondItem="Bf8-Lh-wtt" secondAttribute="trailing" id="iAY-uV-9oY"/>
+                            <constraint firstItem="Bf8-Lh-wtt" firstAttribute="height" secondItem="6LR-Sk-705" secondAttribute="height" id="pzT-HC-88C"/>
+                            <constraint firstItem="6LR-Sk-705" firstAttribute="leading" secondItem="8GC-HW-gHl" secondAttribute="leading" id="w8O-Pe-wck"/>
+                            <constraint firstItem="aog-i5-1xL" firstAttribute="top" secondItem="TUh-Ox-idS" secondAttribute="bottom" id="xRs-Wr-qcs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressDataButton" destination="Bf8-Lh-wtt" id="x3y-Q1-fdH"/>
+                        <outlet property="personalDataButton" destination="6LR-Sk-705" id="diR-6O-1sJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMx-jv-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511" y="1894"/>
+        </scene>
+        <!--Profile Personal Infos Table View Controller-->
+        <scene sceneID="T7r-tu-0xD">
+            <objects>
+                <tableViewController id="IBh-jN-bIt" customClass="RXProfilePersonalInfosTableViewController" customModule="Rafflex_Alpha" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="CK4-B3-0Hw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="486"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x4q-oi-kK8">
+                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x4q-oi-kK8" id="H2C-Du-Lck">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6YC-dc-XsX">
+                                <rect key="frame" x="0.0" y="93.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6YC-dc-XsX" id="ntQ-yz-dvG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="IBh-jN-bIt" id="90K-w0-fs9"/>
+                            <outlet property="delegate" destination="IBh-jN-bIt" id="IH5-3E-H4G"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhJ-M9-1Be" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3217" y="1951"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c6K-u4-RiG">
@@ -853,7 +957,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupCell" id="vo4-ZV-iph" customClass="RXRaffleCollectionViewCell" customModule="Rafflex_Alpha" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="3" width="190" height="190"/>
+                                                            <rect key="frame" x="0.0" y="2.5" width="190" height="190"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
