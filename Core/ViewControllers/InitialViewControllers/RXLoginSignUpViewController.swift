@@ -246,14 +246,25 @@ class RXLoginSignUpViewController   : UITableViewController {
             let
                 _email = self.loginRegisterParameters?[API.Parameter.Email.rawValue],
                 _password = self.loginRegisterParameters?[API.Parameter.Password.rawValue] {
+					MBProgressHUD.showHUDAddedTo(self.view, animated: true)
                     let parameters = [API.Parameter.Email.rawValue: _email, API.Parameter.Password.rawValue: _password]
-                    RXAPIManager.login(parameters, successBlock: { (result) in
-                            self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
-                        }, failureBlock: { (result, error) in
-                            self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
+					RXAPIManager.login(parameters, successBlock: { (result: AnyObject?) in
+							MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+							if let
+								_result = result as? [String: AnyObject],
+								_ = _result[API.Keys.IdUser.rawValue] as? String,
+								_ = _result[API.Keys.FirstName.rawValue] as? String,
+								_ = _result[API.Keys.LastName.rawValue] as? String {
+									self.performSegueWithIdentifier(SegueIds.ToMainMenuViewController, sender: nil)
+							} else {
+								RXErrorHandler.showErrorAlert(inViewController: self, title: L("Login.Error.Title"), message: L("Login.Error.WrongInfos"))
+							}
+						}, failureBlock: { (result: AnyObject?, error: NSError?) in
+							MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+							RXErrorHandler.showErrorAlert(inViewController: self, title: L("Login.Error.Title"), message: L("Login.Error.WrongInfos"))
                     })
         } else if (self.loginSignUpType == .SignUp) {
-            
+			// TODO: Implement sign up
         }
     }
     
