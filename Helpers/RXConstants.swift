@@ -18,6 +18,7 @@ struct API {
     enum Endpoint                               : String {
         
         case Login                              = "login.php"
+		case Register							= "register.php"
     }
     
     enum Parameter                              : String {
@@ -25,6 +26,13 @@ struct API {
         case Email                              = "email"
         case Password                           = "pwd"
     }
+
+	enum Keys									: String {
+
+		case IdUser								= "id_user"
+		case FirstName							= "first_name"
+		case LastName							= "last_name"
+	}
 }
 
 struct StoryboardIds {
@@ -42,6 +50,8 @@ struct SegueIds {
 	static let ToCreateRaffle					= "toCreateRaffle"
 	static let ToRaffleViewController			= "toRafflesViewController"
 	static let ToLoansViewController			= "toAskForALoan"
+	static let ToPersonalContainerView			= "toPersonalContainerView"
+	static let ToPersonalDataViewController		= "toPersonalDataTableView"
 }
 
 struct CellIdentifiers {
@@ -56,6 +66,8 @@ struct CellIdentifiers {
     static let ForgotPassword                   = "ForgotPasswordCell"
 	static let RaffleCategoryCell				= "CategoryCell"
 	static let RaffleGroupCell					= "GroupCell"
+	static let UserInfoCell						= "UserInfoCell"
+	static let UserInfoInputCell				= "UserInputCell"
 }
 
 struct CellHeights {
@@ -66,6 +78,21 @@ struct CellHeights {
     static let RaffleCell                       : CGFloat = 210
     static let ProfileImageCell                 : CGFloat = 200
     static let ProfileCell                      : CGFloat = 55
+}
+
+struct AnimationConstants {
+
+	static let FirstCloverMove					: CGFloat = -80
+	static let SecondCloverMove					: CGFloat = -40
+	static let FinalCloverMove					: CGFloat = -60
+
+	static let GradesToRotateClover				: CGFloat = 40
+	static let NormalCloverWidthHeight			: CGFloat = 150
+	static let LittleCloverWidthHeight			: CGFloat = 130
+
+	static let StandarAnimationInterval			: NSTimeInterval = 0.3
+	static let RotateAnimationInterval			: NSTimeInterval = 1.5
+	
 }
 
 struct CornerRadius {

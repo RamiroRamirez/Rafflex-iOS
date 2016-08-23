@@ -14,14 +14,29 @@
 		280D3A1F1D1093B700FAB68C /* RXWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */; };
 		280D3A201D1093B700FAB68C /* RXWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */; };
 		2811EEB71D08B68E00A59DDF /* RXInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63AE61F1CA95D5B006FF012 /* RXInitialViewController.swift */; };
-		281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
-		281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */; };
 		281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */; };
 		281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */; };
 		281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
 		281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */; };
 		281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
 		281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */; };
+		2841731D1D4E874700E75C7F /* RXPersonalUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841731C1D4E874700E75C7F /* RXPersonalUserInfoCell.swift */; };
+		2841731E1D4E874700E75C7F /* RXPersonalUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2841731C1D4E874700E75C7F /* RXPersonalUserInfoCell.swift */; };
+		28756F2B1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */; };
+		28756F2C1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */; };
+		28756F2F1D3BEA160013CAFA /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2E1D3BEA160013CAFA /* RXMainMenuViewController.swift */; };
+		28756F301D3BEA160013CAFA /* RXMainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F2E1D3BEA160013CAFA /* RXMainMenuViewController.swift */; };
+		28756F321D3BEA3A0013CAFA /* RXHelpInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F311D3BEA3A0013CAFA /* RXHelpInfosViewController.swift */; };
+		28756F331D3BEA3A0013CAFA /* RXHelpInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F311D3BEA3A0013CAFA /* RXHelpInfosViewController.swift */; };
+		28756F351D3BEA510013CAFA /* RXPromosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F341D3BEA510013CAFA /* RXPromosViewController.swift */; };
+		28756F361D3BEA510013CAFA /* RXPromosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28756F341D3BEA510013CAFA /* RXPromosViewController.swift */; };
+		28AE29F51D4BDB580094766C /* RXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE29F41D4BDB580094766C /* RXProfileViewController.swift */; };
+		28AE29F71D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE29F61D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift */; };
+		28AE29F81D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE29F61D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift */; };
+		28AE29FA1D4BDF350094766C /* RXPersonalInformationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE29F91D4BDF350094766C /* RXPersonalInformationContainerViewController.swift */; };
+		28AE29FB1D4BDF350094766C /* RXPersonalInformationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE29F91D4BDF350094766C /* RXPersonalInformationContainerViewController.swift */; };
+		28EDAE7B1D6CDB5D00E13D82 /* RXErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EDAE7A1D6CDB5D00E13D82 /* RXErrorHandler.swift */; };
+		28EDAE7C1D6CDB5D00E13D82 /* RXErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EDAE7A1D6CDB5D00E13D82 /* RXErrorHandler.swift */; };
 		6E5317DFCEE23EFAE0AD91C7 /* Pods_Rafflex_AppStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */; };
 		8BF576EE7D001EF001EE4573 /* Pods_Rafflex_Alpha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */; };
 		B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */; };
@@ -50,8 +65,6 @@
 		B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */; };
 		B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */; };
 		B65DA1A21D3288AF005BFC33 /* chicharito.png in Resources */ = {isa = PBXBuildFile; fileRef = B65DA1A11D3288AF005BFC33 /* chicharito.png */; };
-		B65DA1A41D32A51E005BFC33 /* RXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */; };
-		B65DA1A51D32A51E005BFC33 /* RXProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,10 +72,18 @@
 		280D3A171D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RXInitialViewController+WelcomeScroll.swift"; sourceTree = "<group>"; };
 		280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXWelcomeView.swift; sourceTree = "<group>"; };
 		280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RXWelcomeView.xib; sourceTree = "<group>"; };
-		281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXMainMenuViewController.swift; sourceTree = "<group>"; };
 		281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXCreateRaffleViewController.swift; sourceTree = "<group>"; };
 		281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXRafflesViewController.swift; sourceTree = "<group>"; };
 		281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXLoansViewController.swift; sourceTree = "<group>"; };
+		2841731C1D4E874700E75C7F /* RXPersonalUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXPersonalUserInfoCell.swift; sourceTree = "<group>"; };
+		28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXArrowImageView.swift; sourceTree = "<group>"; };
+		28756F2E1D3BEA160013CAFA /* RXMainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXMainMenuViewController.swift; sourceTree = "<group>"; };
+		28756F311D3BEA3A0013CAFA /* RXHelpInfosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXHelpInfosViewController.swift; sourceTree = "<group>"; };
+		28756F341D3BEA510013CAFA /* RXPromosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXPromosViewController.swift; sourceTree = "<group>"; };
+		28AE29F41D4BDB580094766C /* RXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXProfileViewController.swift; sourceTree = "<group>"; };
+		28AE29F61D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXProfilePersonalInfosTableViewController.swift; sourceTree = "<group>"; };
+		28AE29F91D4BDF350094766C /* RXPersonalInformationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXPersonalInformationContainerViewController.swift; sourceTree = "<group>"; };
+		28EDAE7A1D6CDB5D00E13D82 /* RXErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXErrorHandler.swift; sourceTree = "<group>"; };
 		4DC064B085CFEC17EC5FE644 /* Pods-Rafflex-AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-AppStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-AppStore/Pods-Rafflex-AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		6D3677EBB1E5647A8622220A /* Pods_Rafflex_AppStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_AppStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B93D60F3B281AF3ED29E130 /* Pods-Rafflex-Alpha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rafflex-Alpha.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rafflex-Alpha/Pods-Rafflex-Alpha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +109,6 @@
 		B64B7A311CA5F75200F4E771 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B64B7A321CA5F75E00F4E771 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B65DA1A11D3288AF005BFC33 /* chicharito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicharito.png; sourceTree = "<group>"; };
-		B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXProfileViewController.swift; sourceTree = "<group>"; };
 		CA7CCAD7E99E3E81793DCBC5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD42EA3A515D5DE97326B67 /* Pods_Rafflex_Alpha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rafflex_Alpha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,8 +138,30 @@
 			children = (
 				280D3A1B1D1093B700FAB68C /* RXWelcomeView.swift */,
 				280D3A1C1D1093B700FAB68C /* RXWelcomeView.xib */,
+				28756F2A1D3ACD610013CAFA /* RXArrowImageView.swift */,
+				2841731C1D4E874700E75C7F /* RXPersonalUserInfoCell.swift */,
 			);
 			path = AdditionalViews;
+			sourceTree = "<group>";
+		};
+		28756F2D1D3BEA160013CAFA /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				28756F2E1D3BEA160013CAFA /* RXMainMenuViewController.swift */,
+				28756F311D3BEA3A0013CAFA /* RXHelpInfosViewController.swift */,
+				28756F341D3BEA510013CAFA /* RXPromosViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		28AE29F31D4BDB580094766C /* ProfileViews */ = {
+			isa = PBXGroup;
+			children = (
+				28AE29F41D4BDB580094766C /* RXProfileViewController.swift */,
+				28AE29F91D4BDF350094766C /* RXPersonalInformationContainerViewController.swift */,
+				28AE29F61D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift */,
+			);
+			path = ProfileViews;
 			sourceTree = "<group>";
 		};
 		B63AE61C1CA95D5B006FF012 /* InitialViewControllers */ = {
@@ -170,6 +212,7 @@
 				B64B7A161CA5D06600F4E771 /* RXConstants.swift */,
 				B64B7A2E1CA5F2F000F4E771 /* RXExtensions.swift */,
 				B60ACF041D25B2E000E63D8A /* RXAPIManager.swift */,
+				28EDAE7A1D6CDB5D00E13D82 /* RXErrorHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -198,12 +241,12 @@
 		B64B7A1A1CA5D1C700F4E771 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				28AE29F31D4BDB580094766C /* ProfileViews */,
+				28756F2D1D3BEA160013CAFA /* MainViews */,
 				B63AE61C1CA95D5B006FF012 /* InitialViewControllers */,
-				281652ED1CC6BFA60076FDB4 /* RXMainMenuViewController.swift */,
 				281652F61CC6CBD50076FDB4 /* RXRafflesViewController.swift */,
 				281652F01CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift */,
 				281652F91CC6CC0E0076FDB4 /* RXLoansViewController.swift */,
-				B65DA1A31D32A51E005BFC33 /* RXProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -455,19 +498,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28756F351D3BEA510013CAFA /* RXPromosViewController.swift in Sources */,
+				28AE29FA1D4BDF350094766C /* RXPersonalInformationContainerViewController.swift in Sources */,
+				2841731D1D4E874700E75C7F /* RXPersonalUserInfoCell.swift in Sources */,
 				B60ACF051D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
-				B65DA1A41D32A51E005BFC33 /* RXProfileViewController.swift in Sources */,
+				28AE29F51D4BDB580094766C /* RXProfileViewController.swift in Sources */,
 				281652F71CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B64B79E81CA5993F00F4E771 /* AppDelegate.swift in Sources */,
 				B63AE6241CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
 				B64B7A171CA5D06600F4E771 /* RXConstants.swift in Sources */,
+				28756F2F1D3BEA160013CAFA /* RXMainMenuViewController.swift in Sources */,
 				281652FA1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
-				281652EE1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
+				28756F2B1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */,
 				B63AE6221CA95D5B006FF012 /* RXInitialViewController.swift in Sources */,
 				280D3A181D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				281652F11CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
 				280D3A1D1D1093B700FAB68C /* RXWelcomeView.swift in Sources */,
 				B64B7A2F1CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
+				28EDAE7B1D6CDB5D00E13D82 /* RXErrorHandler.swift in Sources */,
+				28756F321D3BEA3A0013CAFA /* RXHelpInfosViewController.swift in Sources */,
+				28AE29F71D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,19 +525,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28756F361D3BEA510013CAFA /* RXPromosViewController.swift in Sources */,
 				B60ACF061D25B2E000E63D8A /* RXAPIManager.swift in Sources */,
-				B65DA1A51D32A51E005BFC33 /* RXProfileViewController.swift in Sources */,
 				281652F21CC6CB8C0076FDB4 /* RXCreateRaffleViewController.swift in Sources */,
+				28EDAE7C1D6CDB5D00E13D82 /* RXErrorHandler.swift in Sources */,
 				281652F81CC6CBD50076FDB4 /* RXRafflesViewController.swift in Sources */,
 				B63AE6251CA96270006FF012 /* RXLoginSignUpViewController.swift in Sources */,
-				281652EF1CC6BFA60076FDB4 /* RXMainMenuViewController.swift in Sources */,
 				281652FB1CC6CC0E0076FDB4 /* RXLoansViewController.swift in Sources */,
+				28756F301D3BEA160013CAFA /* RXMainMenuViewController.swift in Sources */,
 				B64B79EF1CA59B8100F4E771 /* AppDelegate.swift in Sources */,
+				28756F2C1D3ACD610013CAFA /* RXArrowImageView.swift in Sources */,
 				2811EEB71D08B68E00A59DDF /* RXInitialViewController.swift in Sources */,
 				280D3A191D10926B00FAB68C /* RXInitialViewController+WelcomeScroll.swift in Sources */,
 				B64B7A181CA5D06600F4E771 /* RXConstants.swift in Sources */,
 				280D3A1E1D1093B700FAB68C /* RXWelcomeView.swift in Sources */,
+				28AE29FB1D4BDF350094766C /* RXPersonalInformationContainerViewController.swift in Sources */,
+				2841731E1D4E874700E75C7F /* RXPersonalUserInfoCell.swift in Sources */,
 				B64B7A301CA5F2F000F4E771 /* RXExtensions.swift in Sources */,
+				28756F331D3BEA3A0013CAFA /* RXHelpInfosViewController.swift in Sources */,
+				28AE29F81D4BDB930094766C /* RXProfilePersonalInfosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
