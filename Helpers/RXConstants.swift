@@ -18,6 +18,7 @@ struct API {
     enum Endpoint                               : String {
         
         case Login                              = "login.php"
+		case Register							= "register.php"
     }
     
     enum Parameter                              : String {
@@ -25,6 +26,13 @@ struct API {
         case Email                              = "email"
         case Password                           = "pwd"
     }
+
+	enum Keys									: String {
+
+		case IdUser								= "id_user"
+		case FirstName							= "first_name"
+		case LastName							= "last_name"
+	}
 }
 
 struct StoryboardIds {
@@ -42,6 +50,7 @@ struct SegueIds {
 	static let ToCreateRaffle					= "toCreateRaffle"
 	static let ToRaffleViewController			= "toRafflesViewController"
 	static let ToLoansViewController			= "toAskForALoan"
+	static let ToPersonalContainerView			= "toPersonalContainerView"
 	static let ToPersonalDataViewController		= "toPersonalDataTableView"
 }
 
@@ -57,6 +66,8 @@ struct CellIdentifiers {
     static let ForgotPassword                   = "ForgotPasswordCell"
 	static let RaffleCategoryCell				= "CategoryCell"
 	static let RaffleGroupCell					= "GroupCell"
+	static let UserInfoCell						= "UserInfoCell"
+	static let UserInfoInputCell				= "UserInputCell"
 }
 
 struct CellHeights {

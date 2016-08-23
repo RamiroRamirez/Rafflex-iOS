@@ -14,7 +14,7 @@ struct RXAPIManager {
     // Standard success block returning the result from request.
     typealias SuccessBlock 			= ((result: AnyObject?) -> Void)
     // Standard failure block returning the result and error from request.
-    typealias FailureBlock			= ((result: AnyObject?, error: AnyObject?) -> Void)
+    typealias FailureBlock			= ((result: AnyObject?, error: NSError?) -> Void)
     
     
     struct RequestData {
@@ -42,7 +42,7 @@ struct RXAPIManager {
     private static func GETRequest(requestData: RequestData, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         
         let fullPath = self.baseURLWithPath(requestData.path)
-        Manager.sharedInstance.request(.GET, fullPath, parameters: requestData.parameters, headers: nil).responseJSON { (response) in
+		Manager.sharedInstance.request(.GET, fullPath, parameters: requestData.parameters, headers: nil).responseJSON { (response) in
             if let
                 value = response.result.value,
                 _value = value as? [String: AnyObject] where (response.result.isSuccess == true) {
@@ -56,11 +56,11 @@ struct RXAPIManager {
     private static func POSTRequest(requestData: RequestData, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         
         let fullPath = self.baseURLWithPath(requestData.path)
-        Manager.sharedInstance.request(.POST, fullPath, parameters: requestData.parameters, headers: nil).responseString { (response) in
+		Manager.sharedInstance.request(.POST, fullPath, parameters: requestData.parameters, headers: nil).responseJSON { (response: Response<AnyObject, NSError>) in
             if (response.result.isSuccess == true) {
-                successBlock(result: response as? AnyObject)
+                successBlock(result: response.result.value)
             } else if (response.result.isFailure) {
-                failureBlock(result: response as? AnyObject, error: response.result.error)
+                failureBlock(result: response.result.value, error: response.result.error)
             }
         }
     }
@@ -70,5 +70,11 @@ struct RXAPIManager {
         let requestData = RequestData(path: API.Endpoint.Login.rawValue, parameters: parameters)
         self.POSTRequest(requestData, successBlock: successBlock, failureBlock: failureBlock)
     }
+
+	static func register(parameters: [String: String]?, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+
+		let requestData = RequestData(path: API.Endpoint.Register.rawValue, parameters: parameters)
+		self.POSTRequest(requestData, successBlock: successBlock, failureBlock: failureBlock)
+	}
 
 }

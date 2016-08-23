@@ -19,8 +19,14 @@
 "Login.Button.SignUp"                   = "Sign up";
 "Login.Or"                              = "or";
 "Login.Label.ForgotPassword"            = "Did you forgot your password?";
+"Login.Error.WrongInfos" 				= "Incorrect Email or password";
+"Login.Error.Title"						= "Login";
 
 "Profile.PersonalInformation"           = "Personal Information";
 "Profile.CreatedRaffles"                = "Created Raffles";
 "Profile.BoughtTickets"                 = "Bought tickets";
 "Profile.PaymentMethods"                = "Payment methods";
+
+"Profile.PersonalInformation.Name"		= "Fullname";
+"Profile.PersonalInformation.Handy"		= "Cellphone";
+"Profile.PersonalInformation.Birthday"	= "Bithday";
